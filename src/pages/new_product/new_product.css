@@ -1,0 +1,32 @@
+.new_product{
+    display: grid;
+    /* gap: 1rem; */
+padding: 1rem;
+/* margin: 0 auto; */
+}
+.new_product .header{
+    text-align: center;
+}
+.new_product form {
+box-shadow: var(--shadow-1);
+padding: 1rem;
+    margin: 0 auto;
+max-width: 500px;
+
+}
+.new_product form .form_control{
+    display: grid;
+    gap: 5px;
+}
+
+.new_product form .create_btn{
+    margin: 1rem 0;
+    padding: 5px 15px;
+    border: none;
+    background: var(--primary);
+    border-radius: 5px;
+    color: #fff;
+}
+.new_product form .form_control .select  {
+    width: 140px;
+}

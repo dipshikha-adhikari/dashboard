@@ -1,0 +1,37 @@
+.userlist_table{
+  height: 480px;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin: 0;
+transition: .4s;
+background: #fff;
+/* overflow: hidden; */
+}
+
+.userlist_table .userlist_edit{
+    margin-right: 10px;
+}
+
+.userlist_table .userlist_user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.userlist_table .userlist_image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.userlist_edit{
+    background:green;
+    color:#fff;
+    border:none;
+    padding:4px;
+    border-radius: 4px;
+}
+.userlist_delete{
+    color:red;
+    /* background:red; */
+}

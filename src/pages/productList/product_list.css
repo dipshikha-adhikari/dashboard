@@ -1,0 +1,26 @@
+.product_list{
+    color: #000;
+}
+.product_list .table {
+    margin: 0 auto;
+padding: 1rem;
+   max-width: 900px;
+transition: .4s;
+
+}
+.product_list .table .action{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: none;
+}
+.product_list .table .product_edit{
+    background: green;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+.product_list .table .product_delete{
+    color: red;
+}
