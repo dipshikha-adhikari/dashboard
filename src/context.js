@@ -35,6 +35,7 @@ const AppProvider = ({ children }) => {
       value={{
         isSidebarOpen,
         handleSidebar,
+        setIsSidebarOpen
       }}
     >
       {children}

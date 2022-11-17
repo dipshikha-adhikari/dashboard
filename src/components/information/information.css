@@ -1,13 +1,10 @@
-.information{
-    background: #fff;
-/* width: 100%; */
-}
 
 .information .members{
     display: grid;
     gap:2rem;
     place-items: center;
     margin:1rem 0;
+    background:rgb(219, 210, 210);
 }
 
 .new_members {
@@ -15,6 +12,7 @@
    padding: 5px 20px;
    max-width: 450px;
    width: 100%;
+   background:#fff;
  height: auto;
 
 }
@@ -56,72 +54,6 @@ display: block;
 }
 
 
-.information .latest_tsx{
- box-shadow: var(--shadow-1);
-padding: 4px 20px;
-}
-.information .latest_tsx table td{
-    /* border: 1px solid black; */
-}
-.latest_tsx  .heading{
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin: 1rem 0;
-}
-.latest_tsx .customer h4{
-    font-weight: 500;
-}
-.latest_tsx .table {
-    display: grid;
-    gap: 1rem;
-}
-.latest_tsx table thead tr{
-margin-bottom: 1rem;
-   font-weight: 500;
-}
-.latest_tsx table thead tr , .latest_tsx table tbody tr {
-
-display: flex;
-gap: 4rem;
-justify-content: space-evenly;
-align-items: center;
-}
-.latest_tsx table tbody .customer *{
-    display: block;
-    margin: 5px 0;
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-}
-.latest_tsx .table .table_head .table_row{
-font-weight: bold;
-}
-
-.information .latest_tsx table tbody img{
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-}
-
-.information .latest_tsx table tbody .button_Declined{
- 
-  color: red;
-    height: 2rem;
-    
-}
-.button_Approved{
-    color: green;
-}
-.button_Pending{
-    color: blue;
-}
-
-
-@media screen and (max-width:480px) {
-    .latest_tsx .table_body {
-   font-size: .8rem;
-}
-}
 
 
 @media screen and (min-width:1050px) {
