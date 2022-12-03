@@ -1,37 +1,38 @@
 .information{
-    background: #fff;
-/* width: 100%; */
+display: grid;
+place-items: center;
+gap: 1rem;
+width: 100%;
+margin: 1rem 0;
 }
 
-.information .members{
-    display: grid;
-    gap:2rem;
-    place-items: center;
-    margin:1rem 0;
+@media screen {
+    
 }
 
 .new_members {
    box-shadow: 0 2px 12px rgba(215, 100, 43, 0.4);
    padding: 5px 20px;
-   max-width: 450px;
-   width: 100%;
+  width: 100%;
+  max-width: 450px;
  height: auto;
 
 }
 .new_members .member{
+    display: flex;
     margin: 1rem 0;
+justify-content: space-between;
+/* max-width: 450px; */
+    /* justify-content: space-around; */
 }
+
 .new_members .heading{
     margin-left: 2rem;
   
 }
-.information .new_members .member{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
-}
-.new_members .member .title *{
+
+
+.new_members  .title *{
     margin: 5px 0;
 display: block;
 }
@@ -50,7 +51,7 @@ display: block;
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: rgb(197, 195, 195);
+    background: rgb(181, 202, 236);
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -58,11 +59,12 @@ display: block;
 
 .information .latest_tsx{
  box-shadow: var(--shadow-1);
-padding: 4px 20px;
+max-width: 550px;
+padding: 4px 10px;
+width: 100%;
 }
-.information .latest_tsx table td{
-    /* border: 1px solid black; */
-}
+
+
 .latest_tsx  .heading{
     font-weight: bold;
     font-size: 1.4rem;
@@ -117,22 +119,14 @@ font-weight: bold;
 }
 
 
-@media screen and (max-width:480px) {
-    .latest_tsx .table_body {
-   font-size: .8rem;
-}
-}
 
 
-@media screen and (min-width:1050px) {
-    .information .members{
-        display: flex;
-        width:100%;
-        gap: 1rem;
-        justify-content: space-around;
-        padding: 1rem;
-        align-items: flex-start;
+@media screen and (min-width:1200px) {
+    .information {
+     justify-content: space-around;
         
+        display: flex;
+flex-wrap: wrap;
         }
 }
 

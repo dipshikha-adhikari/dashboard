@@ -4,6 +4,7 @@ import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 import './userlist.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -48,9 +49,9 @@ const columns = [
     width: 110,
     renderCell:(params) => {
       return <>
-        <button className="userlist_edit">
+        <Link to='/users/:id' className="userlist_edit">
         Edit
-      </button>
+      </Link>
       <DeleteIcon className='userlist_delete'/>
       </>
     }

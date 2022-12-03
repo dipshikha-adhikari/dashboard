@@ -20,7 +20,6 @@ html {
   box-sizing: border-box;
 }
 body {
-  /* box-sizing: border-box; */
 
 
   margin: 0;
@@ -41,5 +40,5 @@ justify-content: center;
 display: flex;
 max-width:1400px;
 width: 100%;
-margin-top:15vh;
+margin-top:10vh;
 }

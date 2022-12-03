@@ -33,7 +33,7 @@ export const datas = [
     {
       icon: <PeopleIcon/>,
       name: 'Users',
-  link: "/userlist",
+  link: "/users",
 
     },
     {

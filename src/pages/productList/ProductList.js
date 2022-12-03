@@ -2,6 +2,7 @@ import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 import './product_list.css'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { Link } from 'react-router-dom';
 
 const columns= [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -24,10 +25,10 @@ const columns= [
     headerName: 'Action',
     width: 160,
     renderCell: (params) => {
-      return <button className="action">
-        <span className='product_edit'>Edit</span>
+      return <>
+        <Link to='/products/:id' className='product_edit'>Edit</Link>
         <DeleteOutlineIcon className='product_delete'/>
-      </button>
+      </>
     }
   
   },

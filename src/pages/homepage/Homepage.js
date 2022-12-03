@@ -15,7 +15,7 @@ const Homepage = () => {
   <div className="homepage">
 
    <div className="home_content">
- <Chart/>
+ {/* <Chart/> */}
  {/* <h2>Chat will be here</h2> */}
     <Featured/>
    </div>

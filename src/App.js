@@ -12,6 +12,7 @@ import New from "./pages/new/New";
 import Product from "./pages/product/Product";
 import ProductList from "./pages/productList/ProductList";
 import NewProduct from "./pages/new_product/NewProduct";
+
 const App = () => {
   const { isSidebarOpen } = useGlobalContext();
 
@@ -36,9 +37,9 @@ const App = () => {
     
          
           <Routes>
-          <Route  path="/" element={<Homepage />} />
-          <Route path="/userlist" element={<UserList/> } />
-        <Route path="/user/:userId" element={<User/>} />
+          <Route  path="/" exact  element={<Homepage />} />
+          <Route path="/users" element={<UserList/> } />
+        <Route path="/users/:userId" element={<User/>} />
         <Route path='/user/newUser' element={<New/>} />
         <Route path='/products' element={<ProductList/>} />
         <Route path='/products/:productId' element={<Product/>} />

@@ -10,7 +10,8 @@ const Featured = () => {
 const {isSidebarOpen} = useGlobalContext()
 
   return (<>
-<div className={`${isSidebarOpen ? "featured  push" : "featured"}`}>
+{/* <div className={`${isSidebarOpen ? "featured  push" : "featured"}`}> */}
+<div className="featured">
   <div className="featured_item">
     <h2 className="title">Revenue</h2>
     <div className="amount_container">

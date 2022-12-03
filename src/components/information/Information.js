@@ -9,7 +9,7 @@ const Information = () => {
 
   return (
     <div className="information">
-      <div className="members">
+      
         <div className="new_members">
           <h2 className="heading">New Members</h2>
           <div className="member">
@@ -49,7 +49,7 @@ const Information = () => {
             </div>
           </div>
         </div>
-
+  {/* end of new members  */}
         <div className="latest_tsx">
           <div className="heading">Latest Transcations</div>
           <table>
@@ -129,7 +129,7 @@ const Information = () => {
             </table>
         </div>
       </div>
-    </div>
+  
   );
 };
 
