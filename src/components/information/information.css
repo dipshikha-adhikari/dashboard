@@ -6,8 +6,14 @@ width: 100%;
 margin: 1rem 0;
 }
 
-@media screen {
     
+
+.information .members{
+    display: grid;
+    gap:2rem;
+    place-items: center;
+    margin:1rem 0;
+    background:rgb(219, 210, 210);
 }
 
 .new_members {
@@ -15,6 +21,9 @@ margin: 1rem 0;
    padding: 5px 20px;
   width: 100%;
   max-width: 450px;
+   max-width: 450px;
+   width: 100%;
+   background:#fff;
  height: auto;
 
 }

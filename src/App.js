@@ -12,10 +12,27 @@ import New from "./pages/new/New";
 import Product from "./pages/product/Product";
 import ProductList from "./pages/productList/ProductList";
 import NewProduct from "./pages/new_product/NewProduct";
-
 const App = () => {
-  const { isSidebarOpen } = useGlobalContext();
+  const { isSidebarOpen, setIsSidebarOpen } = useGlobalContext();
+const[startX, setStartX] = useState(0)
+const[endX, setEndX] = useState(0)
 
+  function handleClick(){
+    isSidebarOpen && setIsSidebarOpen(false)
+  }
+  function handleTouchStart(e){
+setStartX(e.changedTouches[0].screenX)
+  }
+
+  function handleTouchEnd(e){
+setEndX(e.changedTouches[0].screenX)
+  }
+  useEffect(() => {
+    if(endX < startX){
+      console.log('left')
+    }
+isSidebarOpen && startX > endX && setIsSidebarOpen(false)
+  },[startX, endX])
   return (
     <>
 
@@ -33,13 +50,17 @@ const App = () => {
         <div
           className={`${isSidebarOpen ? "push_other_content" : "other_content"
             }`}
+            onClick={handleClick}
+            onTouchEnd={handleTouchEnd}
+            onTouchStart={handleTouchStart}
+            
         >
     
          
           <Routes>
-          <Route  path="/" exact  element={<Homepage />} />
-          <Route path="/users" element={<UserList/> } />
-        <Route path="/users/:userId" element={<User/>} />
+          <Route  path="/" element={<Homepage />} />
+          <Route path="/userlist" element={<UserList/> } />
+        <Route path="/user/:userId" element={<User/>} />
         <Route path='/user/newUser' element={<New/>} />
         <Route path='/products' element={<ProductList/>} />
         <Route path='/products/:productId' element={<Product/>} />

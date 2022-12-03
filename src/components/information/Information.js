@@ -49,85 +49,12 @@ const Information = () => {
             </div>
           </div>
         </div>
-  {/* end of new members  */}
+
         <div className="latest_tsx">
           <div className="heading">Latest Transcations</div>
           <table>
 
       
-            <thead>
-              <tr>
-                <td>Customer</td>
-                <td>Date</td>
-                <td>Amount</td>
-                <td>Status</td>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td className="customer">
-                  <img
-                    src="https://media.istockphoto.com/photos/portrait-of-a-happy-young-girl-with-a-smiling-face-picture-id1315976559?b=1&k=20&m=1315976559&s=170667a&w=0&h=YZ-H6Q62Xmw17X3iLusCxlyXHiG5TY1IGSXY5y1UJ7g="
-                    alt=""
-                  />
-                  <h4>Jessi Agrawal</h4>
-                </td>
-                <td>10 Oct 2022</td>
-                <td>$423</td>
-                <td>
-                  <Button type="Declined" />{" "}
-                </td>
-              </tr>
-
-              <tr>
-                <td className="customer">
-                  <img
-                    src="https://media.istockphoto.com/photos/portrait-of-a-happy-young-girl-with-a-smiling-face-picture-id1315976559?b=1&k=20&m=1315976559&s=170667a&w=0&h=YZ-H6Q62Xmw17X3iLusCxlyXHiG5TY1IGSXY5y1UJ7g="
-                    alt=""
-                  />
-                  <h4>Jessi Agrawal</h4>
-                </td>
-                <td>10 Oct 2022</td>
-                <td>$423</td>
-                <td>
-                  <Button type="Pending" />{" "}
-                </td>
-              </tr>
-
-              <tr>
-                <td className="customer">
-                  <img
-                    src="https://media.istockphoto.com/photos/portrait-of-a-happy-young-girl-with-a-smiling-face-picture-id1315976559?b=1&k=20&m=1315976559&s=170667a&w=0&h=YZ-H6Q62Xmw17X3iLusCxlyXHiG5TY1IGSXY5y1UJ7g="
-                    alt=""
-                  />
-                  <h4>Jessi Agrawal</h4>
-                </td>
-                <td>10 Oct 2022</td>
-                <td>$423</td>
-                <td>
-                  <Button type="Approved" />{" "}
-                </td>
-              </tr>
-
-              <tr>
-                <td className="customer">
-                  <img
-                    src="https://media.istockphoto.com/photos/portrait-of-a-happy-young-girl-with-a-smiling-face-picture-id1315976559?b=1&k=20&m=1315976559&s=170667a&w=0&h=YZ-H6Q62Xmw17X3iLusCxlyXHiG5TY1IGSXY5y1UJ7g="
-                    alt=""
-                  />
-                  <h4>Jessi Agrawal</h4>
-                </td>
-                <td>10 Oct 2022</td>
-                <td>$423</td>
-                <td>
-                  <Button type="Approved" />{" "}
-                </td>
-              </tr>
-              
-            </tbody>
-            </table>
-        </div>
       </div>
   
   );
