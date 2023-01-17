@@ -31,13 +31,10 @@ margin: 1rem 0;
     display: flex;
     margin: 1rem 0;
 justify-content: space-between;
-/* max-width: 450px; */
-    /* justify-content: space-around; */
 }
 
 .new_members .heading{
-    margin-left: 2rem;
-  
+  color:var(--primary)
 }
 
 

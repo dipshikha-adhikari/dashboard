@@ -1,13 +1,11 @@
 .product{
     display: grid;
     gap: 2rem;
-   
     padding: 1rem;
-  
+  width:100%;
 }
-.product .top .responsive_chart{
-    /* width: 100%; */
-    height: 200px;
+.product .top .left{
+    width: 100%;
     margin:0 auto;
     max-width:500px;
 }

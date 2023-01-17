@@ -45,10 +45,10 @@ const Product = () => {
     <div className="top">
       <div className="left">  
         <h4>Sale Perfomance</h4>
-      <ResponsiveContainer  width="100%" height={200} className='responsive_chart'>
+      <ResponsiveContainer   height={200} className='responsive_chart'>
    
           <LineChart
-            width={500}
+         
             height={100}
             data={data}
             syncId="anyId"

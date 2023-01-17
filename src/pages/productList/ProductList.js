@@ -5,25 +5,24 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { Link } from 'react-router-dom';
 
 const columns= [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'product', headerName: 'Product', width: 130 },
-  { field: 'stock', headerName: 'Stock', width: 130 },
+  { field: 'id', headerName: 'ID',  minWidth: 130, flex:1 },
+  { field: 'product', headerName: 'Product', minWidth: 130, flex:1 },
+  { field: 'stock', headerName: 'Stock', width: 70 },
   {
     field: 'status',
     headerName: 'Status',
-  
-    width: 90,
+    width: 100,
   },
   {
     field: 'price',
     headerName: 'Price',
-    width: 160,
+    width: 100,
   
   },
   {
     field: 'action',
     headerName: 'Action',
-    width: 160,
+    minWidth: 130, flex:1,
     renderCell: (params) => {
       return <>
         <Link to='/products/:id' className='product_edit'>Edit</Link>
@@ -36,11 +35,11 @@ const columns= [
 
 
 const rows = [
-  { id: 1, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 1, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 1, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 1, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 1, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
+  { id: 121, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
+  { id: 122, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
+  { id: 123, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
+  { id: 124, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
+  { id: 125, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
  
 ];
 
@@ -48,7 +47,7 @@ const rows = [
 const ProductList = () => {
   return (
    <div className="product_list">
-     <div style={{ height: 400, width: '100%' }} className='table'>
+     <div style={{ height: 400 }} className='table'>
       <DataGrid
         rows={rows}
         columns={columns}

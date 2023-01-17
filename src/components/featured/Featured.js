@@ -2,12 +2,10 @@ import React from 'react'
 import './feature.css'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import { useGlobalContext } from '../../context';
 import Chart from '../chart/Chart';
 
 
 const Featured = () => {
-const {isSidebarOpen} = useGlobalContext()
 
   return (<>
 {/* <div className={`${isSidebarOpen ? "featured  push" : "featured"}`}> */}
