@@ -5,15 +5,17 @@ import NotificationsNone from "@mui/icons-material/NotificationsNone";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const Topbar = ({ isSidebarOpen, handleSidebar }) => {
+const Topbar = ({ isSidebarOpen, handleSidebar, closeSidebar }) => {
   return (
     <>
-      <div className="topbar">
+      <div className="topbar" onClick={() => {
+        isSidebarOpen && closeSidebar()
+      }}>
         {/* left */}
         <div className="left" onClick={handleSidebar}>
-          {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
+          {isSidebarOpen ? <CloseIcon /> : <MenuIcon className="menu" />}
         </div>
         {/* center  */}
         <div className="center">
@@ -22,16 +24,16 @@ const Topbar = ({ isSidebarOpen, handleSidebar }) => {
         {/* right  */}
         <div className="right">
           <div className="topbar_icons">
-          <Link to='/login'>Login</Link>
-            <span>
+          <Link to='/login' className="login">login</Link>
+           <Link to='/notifications'>
               <NotificationsNone />
-            </span>
-            <span>
+           </Link>
+           <Link>
               <LanguageIcon />
-            </span>
-            <span>
+           </Link>
+           <Link>
               <SettingsIcon />
-            </span>
+           </Link>
 
             <img
               src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"

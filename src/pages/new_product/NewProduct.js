@@ -16,11 +16,11 @@ const NewProduct = () => {
         <input type="text" placeholder='Nike Shoe' />
      </div>
      <div className="form_control">
-     <label htmlFor="">Stock</label>
-        <input type="number" placeholder='26'/>
+     <label htmlFor="">Price</label>
+        <input type="number" placeholder='2226'/>
      </div>
      <div className="form_control">
-     <label htmlFor="">Active</label>
+     <label htmlFor="">In Stock</label>
      <select  className='select'>
         <option value="yes">Yes</option>
         <option value="no">No</option>

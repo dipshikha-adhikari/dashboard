@@ -69,7 +69,7 @@ const rows = [
     transction: "$423",
   },
   {
-    id: 1,
+    id: 2,
     username: "Sanie Fuse",
     avatar:
       "https://media.istockphoto.com/photos/smiling-man-outdoors-in-the-city-picture-id1179420343?k=20&m=1179420343&s=612x612&w=0&h=G2UGMVSzAXGAQs3pFZpvWlHNRAzwPIWIVtSOxZHsEuc=",
@@ -78,7 +78,7 @@ const rows = [
     transction: "$423",
   },
   {
-    id: 1,
+    id: 3,
     username: "Sanie Fuse",
     avatar:
       "https://media.istockphoto.com/photos/smiling-man-outdoors-in-the-city-picture-id1179420343?k=20&m=1179420343&s=612x612&w=0&h=G2UGMVSzAXGAQs3pFZpvWlHNRAzwPIWIVtSOxZHsEuc=",
@@ -87,7 +87,7 @@ const rows = [
     transction: "$423",
   },
   {
-    id: 1,
+    id: 4,
     username: "Sanie Fuse",
     avatar:
       "https://media.istockphoto.com/photos/smiling-man-outdoors-in-the-city-picture-id1179420343?k=20&m=1179420343&s=612x612&w=0&h=G2UGMVSzAXGAQs3pFZpvWlHNRAzwPIWIVtSOxZHsEuc=",
@@ -96,7 +96,7 @@ const rows = [
     transction: "$423",
   },
   {
-    id: 1,
+    id: 5,
     username: "Sanie Fuse",
     avatar:
       "https://media.istockphoto.com/photos/smiling-man-outdoors-in-the-city-picture-id1179420343?k=20&m=1179420343&s=612x612&w=0&h=G2UGMVSzAXGAQs3pFZpvWlHNRAzwPIWIVtSOxZHsEuc=",

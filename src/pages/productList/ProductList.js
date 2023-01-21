@@ -1,63 +1,82 @@
-import React from 'react'
-import { DataGrid } from '@mui/x-data-grid';
-import './product_list.css'
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { DataGrid } from "@mui/x-data-grid";
+import "./product_list.css";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteProducts, getProducts } from "../../redux/apiCalls";
 
-const columns= [
-  { field: 'id', headerName: 'ID',  minWidth: 130, flex:1 },
-  { field: 'product', headerName: 'Product', minWidth: 130, flex:1 },
-  { field: 'stock', headerName: 'Stock', width: 70 },
-  {
-    field: 'status',
-    headerName: 'Status',
-    width: 100,
-  },
-  {
-    field: 'price',
-    headerName: 'Price',
-    width: 100,
-  
-  },
-  {
-    field: 'action',
-    headerName: 'Action',
-    minWidth: 130, flex:1,
-    renderCell: (params) => {
-      return <>
-        <Link to='/products/:id' className='product_edit'>Edit</Link>
-        <DeleteOutlineIcon className='product_delete'/>
-      </>
-    }
-  
-  },
-];
-
-
-const rows = [
-  { id: 121, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 122, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 123, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 124, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
-  { id: 125, product: 'Nike Hoodie', stock: 243, status:'active', price: `$ 423`  },
- 
-];
 
 
 const ProductList = () => {
-  return (
-   <div className="product_list">
-     <div style={{ height: 400 }} className='table'>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      />
-    </div>
-   </div>
-  )
-}
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.product.products);
 
-export default ProductList
+  useEffect(() => {
+    getProducts(dispatch);
+  }, [dispatch]);
+
+
+  function handleDelete(id) {
+    deleteProducts(id, dispatch)
+  }
+
+
+  const columns = [
+    { field: "_id", headerName: "ID", minWidth: 130, flex: 1 },
+    {
+      field: "img",
+      headerName: "Product",
+      renderCell: (params) => {
+        return <img src={params.row.img} className="product_image" alt="" />;
+      },
+    },
+    { field: "title", flex: 1, headerName: "Title" },
+    {
+      field: "price",
+      headerName: "Price",
+      width: 100,
+    },
+    {
+      field: "action",
+      headerName: "Action",
+      minWidth: 130,
+      flex: 1,
+      renderCell: (params) => {
+        return (
+          <>
+            <Link to={`/products/${params.row._id}`} className="product_edit">
+              Edit
+            </Link>
+            <DeleteOutlineIcon
+              className="product_delete"
+              onClick={() => handleDelete(params.row._id)}
+            />
+          </>
+        );
+      },
+    },
+  ];
+
+
+ 
+  return (
+    <div className="product_list">
+      <div style={{ height: "500px" }} className="table">
+        <DataGrid
+          rows={products}
+          width={100}
+          columns={columns}
+          getRowId={(row) => row._id}
+          pageSize={4}
+          rowsPerPageOptions={[4]}
+          checkboxSelection
+          rowHeight={100}
+      
+        />
+      </div>
+    </div>
+  );
+};
+
+export default ProductList;

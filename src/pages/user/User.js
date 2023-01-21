@@ -14,12 +14,12 @@ const User = () => {
         <div className="user_profile">
           <div className="header">
             <img
-              src="https://media.istockphoto.com/photos/happy-young-indian-girl-with-headphones-looking-at-laptop-screen-picture-id1216915208?k=20&m=1216915208&s=170667a&w=0&h=YRS90hgsHE74os43ZKyXr5b4OREF96TXqt69C2tsx-Y="
+              src="https://media.istockphoto.com/photos/smiling-man-outdoors-in-the-city-picture-id1179420343?k=20&m=1179420343&s=612x612&w=0&h=G2UGMVSzAXGAQs3pFZpvWlHNRAzwPIWIVtSOxZHsEuc="
               alt=""
             />
 
             <div className="title">
-              <h5>Mari Quenda</h5>
+              <h5>Sanie Fuse</h5>
               <span>Software Engineer</span>
             </div>
           </div>
@@ -27,7 +27,7 @@ const User = () => {
           <h4>Account Status</h4>
           <div className="user_details">
             <span>
-              <Person2Icon /> mariquen7
+              <Person2Icon /> sanie7
             </span>
             <span>
               <DateRangeIcon /> 12/17/1996
@@ -36,7 +36,7 @@ const User = () => {
               <PhoneIphoneIcon /> +977 9807500000
             </span>
             <span>
-              <MailOutlineIcon /> mariquen@gmail.com
+              <MailOutlineIcon /> sanie@gmail.com
             </span>
             <span>
               <LocationSearchingIcon /> New Baneshwor | KTM

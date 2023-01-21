@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  z-index: 9;
+  z-index: 50;
   background: #fff;
   top: 0;
   left: 0;
@@ -40,7 +40,15 @@
 .topbar .right .topbar_icons {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
+  cursor:pointer;
+ 
+}
+.topbar .right .topbar_icons *{
+  color: var(--primary-2);
+}
+.topbar .right .topbar_icons .login{
+  text-decoration:none;
 }
 .topbar .right .topbar_icons img {
   width: 40px;

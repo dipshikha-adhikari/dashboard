@@ -11,7 +11,8 @@ import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import MessageIcon from "@mui/icons-material/Message";
 import User from "../../pages/user/User";
-
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 export const datas = [
   {
     title: "dashboard",
@@ -22,18 +23,30 @@ export const datas = [
         link: "/",
         id: 111,
       },
+      // {
+      //   icon: <AutoGraphIcon />,
+      //   name: "Analytics",
+      //   link: "/analytics",
+      //   id: 112,
+      // },
       {
-        icon: <AutoGraphIcon />,
-        name: "Analytics",
-        link: "/analytics",
-        id: 112,
+        icon:<PersonAddIcon/>,
+        name:"New User",
+        link:'/new_user',
+        id:113
       },
       {
-        icon: <ShowChartIcon />,
-        name: "Sales",
-        link: "/sales",
-        id: 113,
-      },
+        icon:<AddCircleIcon/>,
+        name:"New Product",
+        link:'/new_product',
+        id:114
+      }
+      // {
+      //   icon: <ShowChartIcon />,
+      //   name: "Sales",
+      //   link: "/sales",
+      //   id: 115,
+      // },
     ],
   },
   {
@@ -51,58 +64,58 @@ export const datas = [
         link: "/products",
         id: 132,
       },
-      {
-        icon: <MonetizationOnIcon />,
-        name: "Transaction",
-        link: "/transction",
-        id: 133,
-      },
+      // {
+      //   icon: <MonetizationOnIcon />,
+      //   name: "Transaction",
+      //   link: "/transction",
+      //   id: 133,
+      // },
     ],
   },
-  {
-    title: "notifications",
-    sublinks: [
-      {
-        icon: <LocalPostOfficeIcon />,
-        name: "Mail",
-        link: "/mail",
-        id: 141,
-      },
-      {
-        icon: <GradingIcon />,
-        name: "Feedback",
-        link: "/feedback",
-        id: 142,
-      },
-      {
-        icon: <MessageIcon />,
-        name: "Messages",
-        link: "/messages",
-        id: 143,
-      },
-    ],
-  },
-  {
-    title: "staff",
-    sublinks: [
-      {
-        icon: <ManageAccountsIcon />,
-        name: "Manage",
-        link: "/manage",
-        id: 151,
-      },
-      {
-        icon: <AutoGraphIcon />,
-        name: "Analytics",
-        link: "/analytics",
-        id: 152,
-      },
-      {
-        icon: <ReportIcon />,
-        name: "Reports",
-        link: "/reports",
-        id: 153,
-      },
-    ],
-  },
+  // {
+  //   title: "notifications",
+  //   sublinks: [
+  //     {
+  //       icon: <LocalPostOfficeIcon />,
+  //       name: "Mail",
+  //       link: "/mail",
+  //       id: 141,
+  //     },
+  //     {
+  //       icon: <GradingIcon />,
+  //       name: "Feedback",
+  //       link: "/feedback",
+  //       id: 142,
+  //     },
+  //     {
+  //       icon: <MessageIcon />,
+  //       name: "Messages",
+  //       link: "/messages",
+  //       id: 143,
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "staff",
+  //   sublinks: [
+  //     {
+  //       icon: <ManageAccountsIcon />,
+  //       name: "Manage",
+  //       link: "/manage",
+  //       id: 151,
+  //     },
+  //     {
+  //       icon: <AutoGraphIcon />,
+  //       name: "Analytics",
+  //       link: "/analytics",
+  //       id: 152,
+  //     },
+  //     {
+  //       icon: <ReportIcon />,
+  //       name: "Reports",
+  //       link: "/reports",
+  //       id: 153,
+  //     },
+  //   ],
+  // },
 ];

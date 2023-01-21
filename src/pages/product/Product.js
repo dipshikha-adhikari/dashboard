@@ -1,7 +1,7 @@
 import React from 'react'
 import './product.css'
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-
+import { useLocation } from 'react-router-dom';
 import {
   LineChart,
   Line,
@@ -9,12 +9,9 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  Brush,
-  AreaChart,
-  Area,
   ResponsiveContainer,
 } from 'recharts';
+import { useSelector } from 'react-redux';
 
 const data = [
   {
@@ -25,13 +22,13 @@ const data = [
   },
   {
     name: 'Feb',
-    uv: 1700,
+    uv: 700,
     pv: 1398,
     amt: 2210,
   },
   {
     name: 'March',
-    uv: 600,
+    uv: 1600,
     pv: 9800,
     amt: 2290,
   },
@@ -39,9 +36,12 @@ const data = [
 ];
 
 const Product = () => {
+  const location = useLocation()
+  let productId =location.pathname.split('/')[2]
+  const product = useSelector(state => state.product.products.find(p => p._id === productId))
+
   return (
   <div className="product">
-    {/* <div className="title">Product</div> */}
     <div className="top">
       <div className="left">  
         <h4>Sale Perfomance</h4>
@@ -69,12 +69,9 @@ const Product = () => {
       
       </div>
       <div className="right">
-       <div className='header'><img src="https://m.media-amazon.com/images/I/61xawq2UArL._AC_UY1000_.jpg" alt="" /> <h4>Nike Jacket</h4></div>
+       <div className='header'><img src={product.img} alt="" /> <h4>{product.title}</h4></div>
         <div className='info'>
-         <div><span>id</span>241</div>
-         <div><span>sales</span>5423</div>
-         <div><span>active</span>yes</div>
-         <div><span>in stock</span>yes</div>
+         <div><span>id</span>{product._id}</div>
         </div>
       </div>
     </div>
@@ -82,25 +79,19 @@ const Product = () => {
     <div className="bottom">
       <div className="left">
        <div className="title">Product Name</div>
-       <div><input type="text" value='Nike Jacket' /></div>
+       <div><input type="text" placeholder={product.title} /></div>
        <div className='form_control'><label htmlFor="">In Stock</label> 
-       <select  className='select'>
+       <select  className='select' >
        
         <option value="yes">Yes</option>
-        <option value="yes">No</option>
+        <option value="no">No</option>
        </select>
        </div>
-       <div className='form_control'><label htmlFor="">Active</label> 
-       <select  className='select'>
-   
-        <option value="yes">Yes</option>
-        <option value="yes">No</option>
-       </select>
-       </div>
+    
       </div>
 
       <div className="right">
-        <div><img src="https://m.media-amazon.com/images/I/61xawq2UArL._AC_UY1000_.jpg" alt="" />
+        <div><img src={product.img} alt="" />
         <span>
 <CloudUploadIcon/>
         </span>

@@ -1,46 +1,82 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+
 import {AreaChart,ResponsiveContainer, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts'
-import './chart.css'
-import styled from 'styled-components'
 const data = [
   {
-    "name": "Page A",
-    "uv": 4000,
+    "month": "Jan",
+    "uv": 1000,
     "pv": 2400,
     "amt": 2400
   },
   {
-    "name": "Page B",
-    "uv": 3000,
+    "month": "Feb",
+    "uv": 1500,
     "pv": 1398,
     "amt": 2210
   },
   {
-    "name": "Page C",
-    "uv": 2000,
+    "month": "Mar",
+    "uv": 1000,
     "pv": 9800,
     "amt": 2290
   },
   {
-    "name": "Page D",
-    "uv": 2780,
+    "month": "Apr",
+    "uv": 1780,
     "pv": 3908,
     "amt": 2000
   },
   {
-    "name": "Page E",
+    "month": "May",
     "uv": 1890,
     "pv": 4800,
     "amt": 2181
   },
+  
   {
-    "name": "Page F",
-    "uv": 2390,
-    "pv": 3800,
-    "amt": 2500
+    "month": "Jun",
+    "uv": 1490,
+    "pv": 4300,
+    "amt": 2100
+  
   },
   {
-    "name": "Page G",
+    "month": "Jul",
+    "uv": 3490,
+    "pv": 4300,
+    "amt": 2100
+  
+  },
+  {
+    "month": "Aug",
+    "uv": 2490,
+    "pv": 4300,
+    "amt": 2100
+  },
+  
+  {
+    "month": "Sep",
+    "uv": 3490,
+    "pv": 4300,
+    "amt": 2100
+  
+  },
+  {
+    "month": "Oct",
+    "uv": 3200,
+    "pv": 2000,
+    "amt": 2100
+  
+  },
+  {
+    "month": "Nov",
+    "uv": 2490,
+    "pv": 4300,
+    "amt": 2100
+  
+  },
+  {
+    "month": "Dec",
     "uv": 3490,
     "pv": 4300,
     "amt": 2100
@@ -49,12 +85,16 @@ const data = [
 
 
 const Chart = () => {
+ 
+ 
+ 
   return (
    <div className='chart_container'>
-     <div className='chart'>
+     
    
-    <ResponsiveContainer >
+    <ResponsiveContainer width="97%" height={350} >
       <AreaChart
+     
         data={data}
         margin={{
           top: 10,
@@ -64,13 +104,13 @@ const Chart = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
+        <XAxis dataKey='month' />
         <YAxis />
         <Tooltip />
         <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
       </AreaChart>
     </ResponsiveContainer>
-  </div>
+ 
    </div>
   )
 }

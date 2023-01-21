@@ -2,7 +2,7 @@ import React from 'react'
 import './new.css'
 
 
-const New = () => {
+const NewUser = () => {
 
 
   return (
@@ -60,4 +60,4 @@ const New = () => {
   )
 }
 
-export default New
+export default NewUser

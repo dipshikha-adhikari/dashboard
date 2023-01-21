@@ -8,30 +8,37 @@ import Information from "./components/information/Information";
 import {
   BrowserRouter as Router,
   Routes,
-  Switch,
   Route,
+  useNavigate,
 } from "react-router-dom";
 import UserList from "./pages/userlist/UserList";
 import User from "./pages/user/User";
-import New from "./pages/new/New";
 import Product from "./pages/product/Product";
+import Login from "./pages/login/Login";
 import ProductList from "./pages/productList/ProductList";
 import NewProduct from "./pages/new_product/NewProduct";
+import Featured from "./components/featured/Featured";
+import NewUser from "./pages/new_user/NewUser";
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+const navigate = useNavigate()
+  // const admin = JSON.parse(JSON.parse(localStorage.getItem('persist:root')).currentUser).isAdmin
+  const closeSidebar = () => setIsSidebarOpen(false);
+  const handleSidebar = () => setIsSidebarOpen((prev) => !prev);
 
 //   useEffect(() => {
-// window.addEventListener('scroll', closeSidebar)
-//   },[])
-
-  const closeSidebar = () => setIsSidebarOpen(false)
-  const handleSidebar = () => setIsSidebarOpen(prev => !prev)
+// admin ? navigate('/') : navigate(<Login/>)
+// console.log(admin)
+//   },[admin])
   return (
     <>
       <div className="app ">
-        <Topbar isSidebarOpen={isSidebarOpen} handleSidebar={handleSidebar} />
+        <Topbar
+          isSidebarOpen={isSidebarOpen}
+          handleSidebar={handleSidebar}
+          closeSidebar={closeSidebar}
+        />
         <div className="app_main">
           <div
             className={`${
@@ -49,16 +56,19 @@ const App = () => {
             onClick={closeSidebar}
           >
             <Routes>
-              <Route path="/" element={<Homepage />} />
+            <Route path="/" exact element={<Homepage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/new_product" element={<NewProduct />} />
+              <Route path="/new_user" element={<NewUser />} />
               <Route path="/userlist" element={<UserList />} />
               <Route path="/userlist/:userId" element={<User />} />
-              <Route path="/user/newUser" element={<New />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/products/:productId" element={<Product />} />
               <Route path="/product/newProduct" element={<NewProduct />} />
-            </Routes>
 
-            <Information />
+            </Routes>
+   {/* <Featured/>
+            <Information /> */}
           </div>
         </div>
       </div>
