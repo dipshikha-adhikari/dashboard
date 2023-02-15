@@ -13,3 +13,12 @@
 .home_content h2 {
   text-align: center;
 }
+
+@media screen and (min-width:1200px) {
+  .chart_and_featured{
+    display:flex;
+justify-content: space-around;
+max-width: 1200px;
+}
+}
+

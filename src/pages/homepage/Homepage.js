@@ -1,15 +1,17 @@
 import React from "react";
 import "./homepage.css";
-import Chart from "../../components/chart/Chart";
 import Featured from '../../components/featured/Featured'
-import Information from '../../components/information/Information'
+import UserChart from "../../components/chart/UserChart";
+import ProductChart from "../../components/chart/ProductChart";
 const Homepage = () => {
   return (
     <div className="homepage">
       <div className="home_content">
-        <Chart />
+      <UserChart/>
+     <div className="chart_and_featured">
+     <ProductChart/>
         <Featured/>
-        <Information/>
+     </div>
       </div>
     </div>
   );

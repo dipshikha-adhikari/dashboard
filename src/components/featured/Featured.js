@@ -10,34 +10,25 @@ const Featured = () => {
   return (<>
 {/* <div className={`${isSidebarOpen ? "featured  push" : "featured"}`}> */}
 <div className="featured">
-  <div className="featured_item">
-    <h2 className="title">Revenue</h2>
-    <div className="amount_container">
-    <span className='amount'>$ 4,234</span>
-<span className="rate">
-  -21 <ArrowDownwardIcon className='down'/>
-</span>
-    </div>
-      <span className='info'>Compared to last month</span>
-  </div>
+ 
   
   <div className="featured_item">
-    <h2 className="title">Revenue</h2>
-    <div className="amount_container">
-    <span className='amount'>$ 4,234</span>
+    <h2 className="title">Users</h2>
+    <div className="item_info">
+    <span className='quantity'>2344</span>
 <span className="rate">
-  -21 <ArrowDownwardIcon className='down'/>
+  +76 <ArrowUpwardIcon className='up'/>
 </span>
     </div>
       <span className='info'>Compared to last month</span>
   </div>
 
   <div className="featured_item">
-    <h2 className="title">Revenue</h2>
-    <div className="amount_container">
-    <span className='amount'>$ 4,234</span>
+    <h2 className="title">Products</h2>
+    <div className="item_info">
+    <span className='quantity'>234</span>
 <span className="rate">
-  -21 <ArrowDownwardIcon className='down'/>
+  -11 <ArrowDownwardIcon className='down'/>
 </span>
     </div>
       <span className='info'>Compared to last month</span>

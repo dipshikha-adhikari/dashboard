@@ -1,6 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react'
-
+import React, { useContext, useEffect, useMemo, useState } from 'react'
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import { Link } from "react-router-dom";
 import {AreaChart,ResponsiveContainer, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts'
+import { context } from '../../context'
+import './chart.css'
 const data = [
   {
     "month": "Jan",
@@ -84,24 +87,18 @@ const data = [
 ]
 
 
-const Chart = () => {
- 
- 
+const UserChart = () => {
+ const{state} = useContext(context)
+const{users} = state
  
   return (
-   <div className='chart_container'>
-     
-   
-    <ResponsiveContainer width="97%" height={350} >
+ <>
+ <h2 className="heading">Users Chart</h2>
+    <ResponsiveContainer width='99%' height={300} >
       <AreaChart
      
         data={data}
-        margin={{
-          top: 10,
-          right: 30,
-          left: 0,
-          bottom: 0,
-        }}
+       
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey='month' />
@@ -110,9 +107,30 @@ const Chart = () => {
         <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
       </AreaChart>
     </ResponsiveContainer>
- 
-   </div>
+
+ <div className="new_users">
+        <h2 className="heading">New Members</h2>
+       <div className="users">
+       {users.map((user) => {
+          return (
+            <div className="user" key={user._id}>
+            
+              <div className="title">
+                <span>{user.fullName}</span>
+                <span>{user.address}</span>
+              </div>
+              <span>{user.email}</span>
+
+              <Link to={`/userlist/${user._id}`} className='more'>  <RemoveRedEyeIcon /> </Link>
+      
+            </div>
+          );
+        })}
+       </div>
+  
+ </div>
+   </>
   )
 }
 
-export default Chart
+export default UserChart

@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Topbar from "./components/topbar/Topbar";
 import Homepage from "./pages/homepage/Homepage";
 import Sidebar from "./components/sidebar/Sidebar";
-import Information from "./components/information/Information";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,14 +22,10 @@ import NewUser from "./pages/new_user/NewUser";
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 const navigate = useNavigate()
-  // const admin = JSON.parse(JSON.parse(localStorage.getItem('persist:root')).currentUser).isAdmin
   const closeSidebar = () => setIsSidebarOpen(false);
   const handleSidebar = () => setIsSidebarOpen((prev) => !prev);
 
-//   useEffect(() => {
-// admin ? navigate('/') : navigate(<Login/>)
-// console.log(admin)
-//   },[admin])
+
   return (
     <>
       <div className="app ">
@@ -65,10 +60,8 @@ const navigate = useNavigate()
               <Route path="/products" element={<ProductList />} />
               <Route path="/products/:productId" element={<Product />} />
               <Route path="/product/newProduct" element={<NewProduct />} />
-
             </Routes>
-   {/* <Featured/>
-            <Information /> */}
+ 
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@
   padding: 9px;
   top: 12vh;
   position: fixed;
-  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
   width: 0;
   transition: 0.4s;
   overflow: hidden;
@@ -10,6 +9,8 @@
   left: -50%;
   background: #fff;
   height: 100vh;
+  border-right: 1px solid rgb(229, 225, 225);
+ 
 }
 
 ::-webkit-scrollbar {
@@ -38,9 +39,9 @@
 
 @media screen and (min-width: 920px) {
   .sidebar_container {
-    left: 0;
-    width:300px;
-    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+   
+    left: auto;
+    width:250px;
     background: #fff;
     z-index: 2;
     transition: 0.4s;
@@ -48,7 +49,7 @@
   }
 
   .other_content {
-    padding-left: 300px;
+    padding-left: 250px;
     transition: 0.4s;
     width: 100%;
   }

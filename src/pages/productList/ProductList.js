@@ -3,22 +3,16 @@ import { DataGrid } from "@mui/x-data-grid";
 import "./product_list.css";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { deleteProducts, getProducts } from "../../redux/apiCalls";
+
 
 
 
 const ProductList = () => {
-  const dispatch = useDispatch();
-  const products = useSelector((state) => state.product.products);
 
-  useEffect(() => {
-    getProducts(dispatch);
-  }, [dispatch]);
 
 
   function handleDelete(id) {
-    deleteProducts(id, dispatch)
+
   }
 
 
@@ -63,7 +57,7 @@ const ProductList = () => {
   return (
     <div className="product_list">
       <div style={{ height: "500px" }} className="table">
-        <DataGrid
+        {/* <DataGrid
           rows={products}
           width={100}
           columns={columns}
@@ -73,7 +67,7 @@ const ProductList = () => {
           checkboxSelection
           rowHeight={100}
       
-        />
+        /> */}
       </div>
     </div>
   );
