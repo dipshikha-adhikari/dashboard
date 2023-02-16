@@ -1,50 +1,63 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import "./product_list.css";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { Link } from "react-router-dom";
+import { context } from "../../context";
 
 
 
 
 const ProductList = () => {
-
-
-
-  function handleDelete(id) {
-
-  }
+  const { state,dispatch } = useContext(context)
+  const { products } = state
 
 
   const columns = [
-    { field: "_id", headerName: "ID", minWidth: 130, flex: 1 },
+    {
+      field: "id", headerName: "ID", 
+      flex: 1,
+      minWidth:100
+    },{
+      field: "title", flex: 1, headerName: "Title", 
+      minWidth:100
+    
+    },
     {
       field: "img",
       headerName: "Product",
+      flex:1,
+      minWidth:100,
+
       renderCell: (params) => {
-        return <img src={params.row.img} className="product_image" alt="" />;
+        return <img src={params.row.img} className="product_image"  alt="image" />;
       },
     },
-    { field: "title", flex: 1, headerName: "Title" },
+    
     {
       field: "price",
       headerName: "Price",
-      width: 100,
+flex:1,
+    },
+    {
+      field: "inStock",
+      headerName: "inStock",
+// flex:1,
     },
     {
       field: "action",
       headerName: "Action",
-      minWidth: 130,
+    minWidth:170,
       flex: 1,
       renderCell: (params) => {
         return (
           <>
-            <Link to={`/products/${params.row._id}`} className="product_edit">
+            <Link to={`/products/edit/${params.row.id}`} className="product_edit">
               Edit
             </Link>
             <DeleteOutlineIcon
               className="product_delete"
-              onClick={() => handleDelete(params.row._id)}
+              onClick={() => handleDelete(params.row.id)}
             />
           </>
         );
@@ -52,22 +65,27 @@ const ProductList = () => {
     },
   ];
 
+function handleDelete(id){
+  dispatch({
+    type:'DELETE_PRODUCT',
+    payload:id
+  })
+}
 
- 
   return (
     <div className="product_list">
       <div style={{ height: "500px" }} className="table">
-        {/* <DataGrid
+        <DataGrid
           rows={products}
           width={100}
           columns={columns}
-          getRowId={(row) => row._id}
+          // getRowId={(row) => row._id}
           pageSize={4}
           rowsPerPageOptions={[4]}
           checkboxSelection
           rowHeight={100}
-      
-        /> */}
+
+        />
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
  .new_user {
-    padding: 10px;
     width: 100%;
     transition: .4s;
  }
@@ -10,24 +9,13 @@
  }
  .new_user form{
 width: 100%;
-   background: ;
     display: grid;
     gap: 1rem;
-padding: 1rem;
-box-shadow: var(--shadow-1);
 max-width: 400px;
-place-items: center;
-margin: 1rem auto;
-
+margin:0 auto;
  }
 
- .new_user form .left, .new_user form .right{
-    display: grid;
-    gap: 1rem;
-    max-width: 400px;
-    width: 100%;
 
- }
  .new_user form .form_control{
     display: grid;
     gap: 5px 0;
@@ -38,28 +26,12 @@ margin: 1rem auto;
  .form_control input{
     outline: var(--primary);
     border: 1px solid #ddd;
-    padding: 15px;
+    padding: 10px;
     font-size: 1rem;
+    width:100%;
  }
-.new_user form .left .gender .options{
-display: flex;
-gap: 1rem;
-margin-top: 10px;
 
-}
- .new_user form .right .active_status{
-   border: 1px solid #ddd;
-   outline: none;
-border: none;
-width: 200px;
-height: 50px;
-
- }
- .new_user form .right .active_status .option{
-  
-   
- }
- .new_user form .right  .create{
+ .new_user form  .create{
     width: 150px;
     font-size: 1.4rem;
     border: none;
@@ -67,13 +39,8 @@ height: 50px;
     color: #fff;
     padding: 10px;
     border-radius: 8px;
+    cursor:pointer;
  }
-
- @media screen and (min-width:750px) {
-    .new_user form{
-        display: flex;
-        align-items: flex-start;
-     justify-content: space-around;
-   max-width: 100%;
-    }
+ .new_user form  .create:disabled{
+   opacity:0.5;
  }

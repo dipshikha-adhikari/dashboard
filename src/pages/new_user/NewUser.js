@@ -1,61 +1,76 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import './new.css'
-
-
+import { context } from '../../context'
+import Modal from '../../components/modal/Modal'
 const NewUser = () => {
+    const{state, dispatch} = useContext(context)
+    const[isAdding, setIsAdding] = useState(false)
+const [user, setUser] = useState({
+    id:new Date().getUTCMilliseconds(),
+    username:'',
+    fullName:'',
+    email:'',
+    address:'',
+    phone:''
+})
+const resetForm = () => {
+    setUser({
+        id:'',
+        username:'',
+        fullName:'',
+        email:'',
+        address:'',
+        phone:''
+    })
+}
 
+const handleChange = (e) => {
+setUser({...user, [e.target.name]: e.target.value, id:new Date().getUTCMilliseconds()})
+}
+const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch({
+        type:'ADD_USER',
+        payload:user
+    })
+    setIsAdding(true)
+    setTimeout(() => {
+setIsAdding(false)
+resetForm()
+    },2000)
+}
 
   return (
    <div className="new_user">
    <h3 className='header'>New User</h3>
     <form action="">
-    {/* left  */}
-    <div className="left">
 <div className="form_control">
     <label htmlFor="">Username</label>
-    <input type="text" placeholder='biv ak' />
+    <input type="text" name='username' value={user.username} onChange={handleChange}/>
 </div>
 <div className="form_control">
     <label htmlFor="">Email</label>
-    <input type="text" placeholder='biv@gmail.com'/>
+    <input type="text" name='email' value={user ? user.email : ''} onChange={handleChange}/>
 </div>
 <div className="form_control">
     <label htmlFor="">Phone</label>
-    <input type="number" placeholder='977 9807500000' />
+    <input type="number" name='phone' value={user ? user.phone : ''} onChange={handleChange}/>
 </div>
-<div className="form_control gender">
-    <label htmlFor="">Gender</label>
-   <div className="options">
- <span>  <input type="radio" name="gender" value="male" /> Male</span>
-<span><input type="radio" name="gender" value="female" /> Female</span>
-<span><input type="radio" name="gender" value="other" /> Other</span>
-   </div>
-</div>
-</div>
-{/* right  */}
-<div className="right">
 <div className="form_control">
     <label htmlFor="">Full Name</label>
-    <input type="text" placeholder='John Smith' />
+    <input type="text" name='fullName' value={user ? user.fullName : ''} onChange={handleChange}/>
 </div>
-<div className="form_control">
-    <label htmlFor="">Password</label>
-    <input type="text" placeholder='password' />
-</div>
+
 <div className="form_control">
     <label htmlFor="">Address</label>
-    <input type="text" placeholder='New Baneshword | KTM' />
+    <input type="text" name='address' value={user ? user.address : ''} onChange={handleChange}/>
 </div>
-<div className="form_control active_status">
-    <label htmlFor="">Active</label>
-    <select className='select '>
-        <option value="yes" className='option'>Yes</option>
-        <option value="no" className='option'>No</option>
-    </select>
-</div>
-<button className="create">Create</button>
-</div>
+<button className="create" onClick={handleSubmit} disabled={isAdding}>Create</button>
+
     </form>
+    {isAdding && <Modal>
+        <span>User created</span>
+    </Modal>}
    </div>
   )
 }

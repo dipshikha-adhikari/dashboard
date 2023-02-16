@@ -10,7 +10,7 @@ import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantity
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import MessageIcon from "@mui/icons-material/Message";
-import User from "../../pages/user/User";
+import User from "../../pages/user/EditUser";
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 export const datas = [

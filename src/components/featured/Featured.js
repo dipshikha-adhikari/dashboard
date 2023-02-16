@@ -15,9 +15,9 @@ const Featured = () => {
   <div className="featured_item">
     <h2 className="title">Users</h2>
     <div className="item_info">
-    <span className='quantity'>2344</span>
+    <span className='quantity'>3490</span>
 <span className="rate">
-  +76 <ArrowUpwardIcon className='up'/>
+  +390 <ArrowUpwardIcon className='up'/>
 </span>
     </div>
       <span className='info'>Compared to last month</span>
@@ -26,9 +26,9 @@ const Featured = () => {
   <div className="featured_item">
     <h2 className="title">Products</h2>
     <div className="item_info">
-    <span className='quantity'>234</span>
+    <span className='quantity'>70</span>
 <span className="rate">
-  -11 <ArrowDownwardIcon className='down'/>
+  -10 <ArrowDownwardIcon className='down'/>
 </span>
     </div>
       <span className='info'>Compared to last month</span>

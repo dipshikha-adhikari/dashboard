@@ -1,16 +1,14 @@
 .new_product{
     display: grid;
-    /* gap: 1rem; */
-padding: 1rem;
-/* margin: 0 auto; */
+  
 }
-.new_product .header{
+.new_product .heading{
     text-align: center;
 }
 .new_product form {
-box-shadow: var(--shadow-1);
-padding: 1rem;
     margin: 0 auto;
+    display: grid;
+    gap: 15px;
 max-width: 500px;
 
 }
@@ -21,11 +19,17 @@ max-width: 500px;
 
 .new_product form .create_btn{
     margin: 1rem 0;
-    padding: 5px 15px;
+    padding:10px  15px;
+    width: fit-content;
     border: none;
+    font-size: 1.4rem;
     background: var(--primary);
     border-radius: 5px;
     color: #fff;
+    cursor:pointer;
+}
+.new_product form .create_btn:disabled{
+    opacity:0.5;
 }
 .new_product form .form_control .select  {
     width: 140px;

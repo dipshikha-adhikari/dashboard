@@ -29,8 +29,10 @@ overflow-x: scroll;
     border:none;
     padding:4px;
     border-radius: 4px;
+    text-decoration: none;
 }
 .userlist_delete{
     color:red;
     margin-left:2rem;
+    cursor: pointer;
 }

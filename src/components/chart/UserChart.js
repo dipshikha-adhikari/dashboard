@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { Link } from "react-router-dom";
-import {AreaChart,ResponsiveContainer, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts'
+import { AreaChart, ResponsiveContainer, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import { context } from '../../context'
 import './chart.css'
 const data = [
@@ -35,20 +35,20 @@ const data = [
     "pv": 4800,
     "amt": 2181
   },
-  
+
   {
     "month": "Jun",
     "uv": 1490,
     "pv": 4300,
     "amt": 2100
-  
+
   },
   {
     "month": "Jul",
     "uv": 3490,
     "pv": 4300,
     "amt": 2100
-  
+
   },
   {
     "month": "Aug",
@@ -56,27 +56,27 @@ const data = [
     "pv": 4300,
     "amt": 2100
   },
-  
+
   {
     "month": "Sep",
     "uv": 3490,
     "pv": 4300,
     "amt": 2100
-  
+
   },
   {
     "month": "Oct",
     "uv": 3200,
     "pv": 2000,
     "amt": 2100
-  
+
   },
   {
     "month": "Nov",
-    "uv": 2490,
+    "uv": 3100,
     "pv": 4300,
     "amt": 2100
-  
+
   },
   {
     "month": "Dec",
@@ -88,48 +88,48 @@ const data = [
 
 
 const UserChart = () => {
- const{state} = useContext(context)
-const{users} = state
- 
+  const { state } = useContext(context)
+  const { users } = state
+
   return (
- <>
- <h2 className="heading">Users Chart</h2>
-    <ResponsiveContainer width='99%' height={300} >
-      <AreaChart
-     
-        data={data}
-       
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey='month' />
-        <YAxis />
-        <Tooltip />
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
-      </AreaChart>
-    </ResponsiveContainer>
+    <>
+      <h2 className="heading">Users Chart</h2>
+      <ResponsiveContainer width='99%' height={300} >
+        <AreaChart
 
- <div className="new_users">
+          data={data}
+
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey='month' />
+          <YAxis />
+          <Tooltip />
+          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+        </AreaChart>
+      </ResponsiveContainer>
+
+      <div className="new_users">
         <h2 className="heading">New Members</h2>
-       <div className="users">
-       {users.map((user) => {
-          return (
-            <div className="user" key={user._id}>
-            
-              <div className="title">
-                <span>{user.fullName}</span>
-                <span>{user.address}</span>
-              </div>
-              <span>{user.email}</span>
+        <div className="users">
+          {users.map((user) => {
+            return (
+              <div className="user" key={user.id}>
 
-              <Link to={`/userlist/${user._id}`} className='more'>  <RemoveRedEyeIcon /> </Link>
-      
-            </div>
-          );
-        })}
-       </div>
-  
- </div>
-   </>
+                <div className="title">
+                  <span>{user.fullName}</span>
+                  <span>{user.address}</span>
+                </div>
+                <span>{user.email}</span>
+
+                <Link to={`/userlist/${user.id}`} className='more'>  <RemoveRedEyeIcon /> </Link>
+
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </>
   )
 }
 

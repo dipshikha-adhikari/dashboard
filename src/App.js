@@ -11,19 +11,27 @@ import {
   useNavigate,
 } from "react-router-dom";
 import UserList from "./pages/userlist/UserList";
-import User from "./pages/user/User";
-import Product from "./pages/product/Product";
+import EditUser from "./pages/user/EditUser";
+import EditProduct from "./pages/product/EditProduct";
 import Login from "./pages/login/Login";
 import ProductList from "./pages/productList/ProductList";
 import NewProduct from "./pages/new_product/NewProduct";
 import Featured from "./components/featured/Featured";
 import NewUser from "./pages/new_user/NewUser";
+import Product from "./pages/product/Product";
+import User from "./pages/user/User";
 
+const Account = () => {
+  return <div style={{textAlign:'center'}}>
+    <span>You are not registered</span>
+  </div>
+}
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 const navigate = useNavigate()
   const closeSidebar = () => setIsSidebarOpen(false);
   const handleSidebar = () => setIsSidebarOpen((prev) => !prev);
+
 
 
   return (
@@ -53,12 +61,15 @@ const navigate = useNavigate()
             <Routes>
             <Route path="/" exact element={<Homepage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/account" element={<Account />} />
               <Route path="/new_product" element={<NewProduct />} />
               <Route path="/new_user" element={<NewUser />} />
               <Route path="/userlist" element={<UserList />} />
-              <Route path="/userlist/:userId" element={<User />} />
+              <Route path="/userlist/:userId" element={<User/>} />
+              <Route path="/userlist/edit/:userId" element={<EditUser />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/products/:productId" element={<Product />} />
+              <Route path="/products/edit/:productId" element={<EditProduct />} />
               <Route path="/product/newProduct" element={<NewProduct />} />
             </Routes>
  

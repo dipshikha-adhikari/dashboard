@@ -15,37 +15,37 @@ const ProductChart = () => {
       const data = [
         {
           name: 'Jan',
-          uv: 1000,
+          uv: 40,
           pv: 2400,
           amt: 2400,
         },
         {
           name: 'Mar',
-          uv: 700,
+          uv: 70,
           pv: 1398,
           amt: 2210,
         },
         {
           name: 'May',
-          uv: 1600,
+          uv: 50,
           pv: 9800,
           amt: 2290,
         },
         {
           name: 'Jul',
-          uv: 1000,
+          uv: 70,
           pv: 2400,
           amt: 2400,
         },
         {
           name: 'Sep',
-          uv: 700,
+          uv: 80,
           pv: 1398,
           amt: 2210,
         },
         {
           name: 'Nov',
-          uv: 1600,
+          uv: 70,
           pv: 9800,
           amt: 2290,
         },
