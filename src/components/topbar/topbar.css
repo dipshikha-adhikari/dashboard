@@ -41,7 +41,7 @@
 .topbar .right .topbar_icons {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 1rem;
   cursor:pointer;
  
 }

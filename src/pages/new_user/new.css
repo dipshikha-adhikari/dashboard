@@ -1,6 +1,7 @@
  .new_user {
     width: 100%;
     transition: .4s;
+    padding: 0 10px;
  }
  
  .new_user .header{

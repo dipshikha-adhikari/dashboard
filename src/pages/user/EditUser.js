@@ -35,29 +35,29 @@ setUser({...user, [e.target.name]:e.target.value})
   return (
     <div className="edit_user">
       <h4 className="heading">Edit</h4>
-        <form action="">
+        <form action="" onSubmit={handleUpdate}>
         
               <div className="form_control">
                 <label htmlFor="">Username</label>
-                <input type="text" name="username" value={user ? user.username : ''} onChange={handleChange} />
+                <input type="text" name="username" value={user ? user.username : ''} onChange={handleChange}  required/>
               </div>
               <div className="form_control">
                 <label htmlFor="">Fullname</label>
-                <input type="text" value={user ? user.fullName : ''} onChange={handleChange} />
+                <input type="text" value={user ? user.fullName : ''} onChange={handleChange} required />
               </div>
               <div className="form_control">
                 <label htmlFor="">email</label>
-                <input type="email" value={user ? user.email : ''}  onChange={handleChange}/>
+                <input type="email" value={user ? user.email : ''}  onChange={handleChange} required/>
               </div>
               <div className="form_control">
                 <label htmlFor="">Phone</label>
-                <input type="number" value={user ? user.phone : ''}  onChange={handleChange}/>
+                <input type="number" value={user ? user.phone : ''}  onChange={handleChange} required/>
               </div>
               <div className="form_control">
                 <label htmlFor="">Address</label>
-                <input type="text" value={user ? user.address : ''} onChange={handleChange} />
+                <input type="text" value={user ? user.address : ''} onChange={handleChange} required/>
               </div>
-              <button className="update" onClick={handleUpdate} disabled={isUpdating}>Update</button>
+              <button className="update" type="submit" disabled={isUpdating}>Update</button>
         </form>
         {isUpdating && <Modal>
           <span>User updated</span>

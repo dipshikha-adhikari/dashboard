@@ -36,7 +36,7 @@ const ProductList = () => {
     
     {
       field: "price",
-      headerName: "Price",
+      headerName: "Price(In Dollars)",
 flex:1,
     },
     {

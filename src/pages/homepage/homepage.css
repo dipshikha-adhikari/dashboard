@@ -1,13 +1,12 @@
 .homepage {
   position: relative;
-  gap: 0.6rem;
 }
 
 .homepage .home_content {
   padding: 1rem;
   margin-top: -2rem;
   display: grid;
-  gap: 1rem;
+  /* gap: 1rem; */
   width: 100%;
 }
 .home_content h2 {
@@ -17,8 +16,9 @@
 @media screen and (min-width:1200px) {
   .chart_and_featured{
     display:flex;
-justify-content: space-around;
-max-width: 1200px;
+justify-content: center;
+max-width: 1000px;
+width: 100%;
 }
 }
 

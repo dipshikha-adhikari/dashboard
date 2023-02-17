@@ -1,33 +1,32 @@
-
 .edit_user {
   max-width: 400px;
   width: 100%;
-  margin:0 auto;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.edit_user .heading{
+.edit_user .heading {
   text-align: center;
 }
-.edit_user form{
+.edit_user form {
   display: grid;
   gap: 1rem;
 }
-
 
 .edit_user form .form_control {
   display: grid;
   gap: 5px;
 }
 
-
-.edit_user  .form_control input {
+.edit_user .form_control input {
   outline: none;
   border: none;
-  border-bottom: 1px solid black;
-  padding: 4px 14px;
+  border: 1px solid rgb(215, 214, 214);
+  padding: 8px 14px;
 }
 
-.edit_user form .update ,.edit_btn{
+.edit_user form .update,
+.edit_btn {
   background: var(--primary);
   border: none;
   color: #fff;
@@ -40,21 +39,19 @@
   margin: 1rem 0;
   width: fit-content;
 }
-.edit_user form .update:disabled{
-  opacity: .5;
+.edit_user form .update:disabled {
+  opacity: 0.5;
 }
 
-
 /* user page  */
-.user{
+.user {
   display: grid;
   place-items: center;
 }
-.user .info{
+.user .info {
   display: grid;
   place-items: center;
   gap: 1rem;
 }
-.edit_btn{
-
+.edit_btn {
 }

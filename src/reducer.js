@@ -21,14 +21,14 @@ export const initialState = {
 {
     id:121,
     title:'Nike hoodie',
-    price:'$45',
+    price:'45',
     img:'https://m.media-amazon.com/images/I/61xawq2UArL._AC_UF1000,1000_QL80_.jpg',
     inStock:'yes'
 },
 {
     id:122,
     title:'Adidas Cap',
-    price:'$15',
+    price:'15',
     img:'https://assets.adidas.com/images/w_600,f_auto,q_auto/9382df3f01f54fbf9a14a9610123ec22_9366/Trefoil_Baseball_Cap_Black_EC3603_01_standard.jpg',
     inStock:'no'
 }

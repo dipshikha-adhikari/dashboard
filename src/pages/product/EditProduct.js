@@ -44,14 +44,14 @@ setTimeout(() => {
   <div className="product">
    
    
-   <form action="">
+   <form action="" onSubmit={handleSubmit}>
    <div className="form_control">
         <label htmlFor="">Title</label>
-        <input type="text" name='title' value={product ? product.title : ''}  onChange={handleChange}/>
+        <input type="text" name='title' value={product ? product.title : ''}  onChange={handleChange} required={true}/>
     </div>
     <div className="form_control">
         <label htmlFor="">Price</label>
-        <input type="text" name='price' value={product ? product.price : ''} onChange={handleChange}/>
+        <input type="text" name='price' value={product ? product.price : ''} onChange={handleChange} required={true}/>
     </div>
     <div className="form_control">
 
@@ -71,7 +71,7 @@ setTimeout(() => {
         <option value="yes">Yes</option>
        </select> }
         </div>
-<button className="update_btn" onClick={handleSubmit} disabled={isUpdating}>Update</button>
+<button className="update_btn" type='submit' disabled={isUpdating}>Update</button>
 
    </form>
    {isUpdating &&  <Modal>

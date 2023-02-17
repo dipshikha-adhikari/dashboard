@@ -1,6 +1,6 @@
 .new_product{
     display: grid;
-  
+  padding:0 10px;
 }
 .new_product .heading{
     text-align: center;

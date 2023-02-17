@@ -1,7 +1,7 @@
 .login_container{
     width: 100%;
     text-align:center;
-    /* padding: 2rem 1rem; */
+    padding: 2rem ;
 }
 .login_container form{
 display: grid;
@@ -25,4 +25,7 @@ form input{
     padding: 10px;
     border: 1px solid gray;
 
+}
+.login_container span{
+    font-size:1.5rem;
 }
