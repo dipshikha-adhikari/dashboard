@@ -79,15 +79,12 @@ const UserChart = () => {
           {users.map((user) => {
             return (
               <div className="user" key={user.id}>
-
                 <div className="title">
                   <span>{user.fullName}</span>
                   <span>{user.address}</span>
                 </div>
-                <span>{user.email}</span>
-
+                <span className='email'>{user.email}</span>
                 <Link to={`/userlist/${user.id}`} className='more'>  <RemoveRedEyeIcon /> </Link>
-
               </div>
             );
           })}

@@ -10,7 +10,7 @@ const Login = () => {
     <input type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)}/>
     <button onClick={handleClick}>Login</button>
    </form> */}
-   <span>Login function not available yet.</span>
+   <span>No need of login 😉</span>
 </div>
   )
 }

@@ -44,15 +44,14 @@
     width:250px;
     background: #fff;
     z-index: 2;
-    transition: 0.4s;
     padding: 1rem;
   }
 
   .other_content {
     padding-left: 250px;
-    transition: 0.4s;
     width: 100%;
   }
+ 
 }
 
 .sidebar .sidebar_wrapper {

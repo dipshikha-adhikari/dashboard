@@ -43,29 +43,29 @@ resetForm()
   return (
    <div className="new_user">
    <h3 className='header'>New User</h3>
-    <form action="">
+    <form action="" onSubmit={handleSubmit}>
 <div className="form_control">
     <label htmlFor="">Username</label>
-    <input type="text" name='username' value={user.username} onChange={handleChange}/>
+    <input type="text" name='username' value={user.username} onChange={handleChange} required/>
 </div>
 <div className="form_control">
     <label htmlFor="">Email</label>
-    <input type="text" name='email' value={user ? user.email : ''} onChange={handleChange}/>
+    <input type="email" name='email' value={user ? user.email : ''} onChange={handleChange} required/>
 </div>
 <div className="form_control">
     <label htmlFor="">Phone</label>
-    <input type="number" name='phone' value={user ? user.phone : ''} onChange={handleChange}/>
+    <input type="number" name='phone' value={user ? user.phone : ''} onChange={handleChange} required/>
 </div>
 <div className="form_control">
     <label htmlFor="">Full Name</label>
-    <input type="text" name='fullName' value={user ? user.fullName : ''} onChange={handleChange}/>
+    <input type="text" name='fullName' value={user ? user.fullName : ''} onChange={handleChange} required/>
 </div>
 
 <div className="form_control">
     <label htmlFor="">Address</label>
-    <input type="text" name='address' value={user ? user.address : ''} onChange={handleChange}/>
+    <input type="text" name='address' value={user ? user.address : ''} onChange={handleChange} required/>
 </div>
-<button className="create" onClick={handleSubmit} disabled={isAdding}>Create</button>
+<button className="create" type='submit' disabled={isAdding}>Create</button>
 
     </form>
     {isAdding && <Modal>

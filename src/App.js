@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./index.css";
 import { useState, useEffect } from "react";
 import Topbar from "./components/topbar/Topbar";
@@ -22,13 +22,17 @@ import User from "./pages/user/User";
 
 const Account = () => {
   return <div style={{textAlign:'center',padding:'2rem', fontSize:'1.5rem'}}>
-    <span>You are not registered</span>
+    <span>You are not registered 😐</span>
   </div>
 }
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const closeSidebar = () => setIsSidebarOpen(false);
-  const handleSidebar = () => setIsSidebarOpen((prev) => !prev);
+
+  
+  const handleSidebar = () => {
+    setIsSidebarOpen(prev => !prev)
+  };
 
 
 
@@ -40,7 +44,7 @@ const App = () => {
           handleSidebar={handleSidebar}
           closeSidebar={closeSidebar}
         />
-        <div className="app_main">
+        <div className="app_main" >
           <div
             className={`${
               isSidebarOpen
@@ -48,7 +52,7 @@ const App = () => {
                 : "sidebar_container"
             }`}
           >
-            <Sidebar handleSidebar={handleSidebar} />
+            <Sidebar closeSidebar={closeSidebar} />
           </div>
           <div
             className={`${

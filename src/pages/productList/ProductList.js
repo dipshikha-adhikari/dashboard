@@ -79,7 +79,6 @@ function handleDelete(id){
           rows={products}
           width={100}
           columns={columns}
-          // getRowId={(row) => row._id}
           pageSize={4}
           rowsPerPageOptions={[4]}
           checkboxSelection
