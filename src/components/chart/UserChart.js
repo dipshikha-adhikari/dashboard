@@ -11,14 +11,14 @@ const data = [
     "pv": 2400,
     "amt": 2400
   },
- 
+
   {
     "month": "Mar",
     "uv": 850,
     "pv": 9800,
     "amt": 2290
   },
- 
+
   {
     "month": "May",
     "uv": 900,
@@ -26,7 +26,7 @@ const data = [
     "amt": 2181
   },
 
- 
+
   {
     "month": "Jul",
     "uv": 1170,
@@ -34,7 +34,7 @@ const data = [
     "amt": 2100
 
   },
- 
+
   {
     "month": "Sep",
     "uv": 1250,
@@ -42,7 +42,7 @@ const data = [
     "amt": 2100
 
   },
- 
+
   {
     "month": "Nov",
     "uv": 1400,
@@ -76,18 +76,19 @@ const UserChart = () => {
       <div className="new_users">
         <h2 className="heading">New Members</h2>
         <div className="users">
-          {users.map((user) => {
+          {users.length !== 0 ? users.map((user) => {
             return (
               <div className="user" key={user.id}>
                 <div className="title">
                   <span>{user.fullName}</span>
                   <span>{user.address}</span>
+                  
                 </div>
                 <span className='email'>{user.email}</span>
                 <Link to={`/userlist/${user.id}`} className='more'>  <RemoveRedEyeIcon /> </Link>
               </div>
             );
-          })}
+          }) : <span style={{textAlign:'center'}}>No users</span>}
         </div>
 
       </div>

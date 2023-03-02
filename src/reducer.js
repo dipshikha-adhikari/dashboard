@@ -33,7 +33,11 @@ export const initialState = {
     inStock:'no'
 }
     ],
-    isUpdating:false 
+    isUpdating:false ,
+    userCount:1400,
+    prevUserCount:1250,
+    productCount:80,
+    prevProductCount:90
 }
 
 
@@ -41,14 +45,16 @@ export const reducer = (state,action) => {
 switch(action.type){
     case 'ADD_USER' : {
         const newUser = action.payload 
-       
-                return {...state, users:[...state.users, newUser]}
+       const userCount = state.userCount + 1
+                return {...state, users:[...state.users, newUser], userCount}
 
     }
     case 'DELETE_USER':{
     //  let users = [...state.users]
+    const userCount = state.userCount - 1
+
      let updatedUsers = state.users.filter(u => u.id !== action.payload) 
-    return   {...state, users:updatedUsers}
+    return   {...state, users:updatedUsers, userCount}
     }
     
     case 'EDIT_USER':{
@@ -60,12 +66,15 @@ switch(action.type){
     
     case 'ADD_PRODUCT' : {
 const newProduct = action.payload 
-return {...state, products:[...state.products, newProduct]}
+const productCount = state.productCount + 1
+return {...state, products:[...state.products, newProduct], productCount}
     }
     case 'DELETE_PRODUCT':{
+const productCount = state.productCount - 1
+
 const index = state.products.findIndex(user => user.id === action.payload)
 const updatedProducts = state.products.filter((p,i) => i !== index)
-return {...state, products:updatedProducts}
+return {...state, products:updatedProducts,productCount}
     }
     case 'EDIT_PRODUCT':{
 const  products = [...state.products]

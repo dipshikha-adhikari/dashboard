@@ -34,6 +34,7 @@ const handleSubmit = (e) => {
         payload:user
     })
     setIsAdding(true)
+    
     setTimeout(() => {
 setIsAdding(false)
 resetForm()
