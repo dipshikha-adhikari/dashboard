@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import "./homepage.css";
-import Featured from '../../components/featured/Featured'
-import UserChart from "../../components/chart/UserChart";
-import ProductChart from "../../components/chart/ProductChart";
+import Widget from "../../components/widget/Widget";
+import Table from '../../components/table/Table'
+import { userData } from '../../components/utils/data';
+
+
 const Homepage = () => {
  
   return (
     <div className="homepage">
-      <div className="home_content">
-      <UserChart/>
-     <div className="chart_and_featured">
-     <ProductChart/>
-        <Featured />
+     <div className="heading">
+     <h2>Dashboard</h2>
+    <div className="date">
+    <select name="" id="">
+     <option value="3/22/2023">3/22/2023</option>
+     </select>
+     <button>Export</button>
+    </div>
      </div>
-      </div>
+        <Widget/>
+      <div className='orders'>
+<h2>Recent orders</h2>
+      <Table data={userData}/>
+        </div>
+        
     </div>
   );
 };

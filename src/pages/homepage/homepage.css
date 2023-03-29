@@ -1,23 +1,36 @@
 .homepage {
   position: relative;
+  padding:10px;
 }
 
-.homepage .home_content {
-  padding: 1rem;
-  margin-top: -2rem;
-  display: grid;
-  width: 100%;
+.homepage .heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.home_content h2 {
-  text-align: center;
-}
-
-@media screen and (min-width:1200px) {
-  .chart_and_featured{
-    display:flex;
-justify-content: center;
-max-width: 1000px;
-width: 100%;
-}
+.homepage .heading h2{
+  color: var(--primary-2);
 }
 
+.homepage .heading .date{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.homepage .date select{
+padding: 5px;
+  outline: none;
+}
+.homepage .date button{
+  background: var(--primary-2);
+  border: none;
+  color: aliceblue;
+  padding: 5px 10px;
+}
+
+.homepage .orders{
+  margin-top: 4rem;
+}
+.homepage .orders h2{
+  color: var(--primary-2);
+}
