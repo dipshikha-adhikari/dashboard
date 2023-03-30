@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.homepage .heading h2{
+.homepage .heading {
   color: var(--primary-2);
 }
 
@@ -33,4 +33,29 @@ padding: 5px;
 }
 .homepage .orders h2{
   color: var(--primary-2);
+}
+
+
+.homepage .most_sales .heading{
+  color: var(--primary-2);
+   
+}
+
+@media screen and (min-width:1000px) {
+  .homepage .orders{
+    margin-top:6rem;
+  }
+  .homepage{
+    padding:0 1.5rem;
+  }
+  .homepage .most_sales .data{
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+  }
+  .homepage .most_sales .chart{
+  max-width: 400px;
+  }
+
 }

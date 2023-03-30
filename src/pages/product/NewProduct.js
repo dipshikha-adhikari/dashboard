@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import './new_product.css'
+import './product.css'
 import {context} from '../../context'
 import Modal from '../../components/modal/Modal'
 const NewProduct = () => {

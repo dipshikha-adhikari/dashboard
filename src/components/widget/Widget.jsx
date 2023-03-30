@@ -47,9 +47,9 @@ const Widget = () => {
 
 <section className="section_2">
   <div className="new_users">
-    <h2 className='heading'>New users</h2>
+    <h4 className='heading'>New users</h4>
     <div className="users">
-          {users.length !== 0 ? users.map((user) => {
+          {users.length !== 0 ? users.slice(0,5).map((user) => {
             return (
               <div className="user" key={user.id}>
                 <div className="title">
@@ -66,7 +66,7 @@ const Widget = () => {
   </div>
 
   <div className="chart">
-    <h2 className='heading'>Income statistics</h2>
+    <h4 className='heading'>Income statistics</h4>
   <Chart/>
 
   </div>

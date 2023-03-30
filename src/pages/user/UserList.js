@@ -1,9 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-import "./userlist.css";
+import "./user.css";
 import { Link } from "react-router-dom";
 import { context } from "../../context";
 

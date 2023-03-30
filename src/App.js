@@ -8,17 +8,18 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
 } from "react-router-dom";
-import UserList from "./pages/userlist/UserList";
-import EditUser from "./pages/user/EditUser";
-import EditProduct from "./pages/product/EditProduct";
 import Login from "./pages/login/Login";
-import ProductList from "./pages/productList/ProductList";
-import NewProduct from "./pages/new_product/NewProduct";
-import NewUser from "./pages/new_user/NewUser";
+
 import Product from "./pages/product/Product";
 import User from "./pages/user/User";
+import ProductList from "./pages/product/ProductList";
+import NewProduct from "./pages/product/NewProduct";
+import EditProduct from "./pages/product/EditProduct";
+import EditUser from "./pages/user/EditUser";
+import NewUser from "./pages/user/NewUser";
+import UserList from './pages/user/UserList'
+import Orders from "./pages/orders/Orders";
 
 const Account = () => {
   return <div style={{textAlign:'center',padding:'2rem', fontSize:'1.5rem'}}>
@@ -73,6 +74,7 @@ const App = () => {
               <Route path="/products/:productId" element={<Product />} />
               <Route path="/products/edit/:productId" element={<EditProduct />} />
               <Route path="/product/newProduct" element={<NewProduct />} />
+              <Route path="/orders" element={<Orders/>}/>
             </Routes>
  
           </div>

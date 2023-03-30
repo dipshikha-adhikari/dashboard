@@ -46,3 +46,7 @@ width: 100%;
 margin-top:12vh;
 padding:10px 5px;
 }
+
+.app_main .heading{
+  color: var(--primary-1);
+}

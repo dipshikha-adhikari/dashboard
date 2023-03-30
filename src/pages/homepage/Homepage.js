@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./homepage.css";
 import Widget from "../../components/widget/Widget";
 import Table from '../../components/table/Table'
-import { userData } from '../../components/utils/data';
+import { orderColumns, orderData, salesColumns, salesData } from '../../components/utils/data';
+import PieChart from "../../components/pieChart";
 
 
 const Homepage = () => {
@@ -20,10 +21,20 @@ const Homepage = () => {
      </div>
         <Widget/>
       <div className='orders'>
-<h2>Recent orders</h2>
-      <Table data={userData}/>
+<h4 className="heading">Recent orders</h4>
+      <Table data={orderData} columns={orderColumns}/>
         </div>
-        
+        <div className="most_sales">
+          <h4 className="heading">Most sold items</h4>
+          <div className="data">
+         <div className="chart">
+         <PieChart/>
+         </div>
+         <Table data={salesData} columns={salesColumns} />
+       
+       
+          </div>
+        </div>
     </div>
   );
 };

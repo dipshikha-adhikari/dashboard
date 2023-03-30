@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { context } from '../../context'
+import './user.css'
 
 const User = () => {
     const id = parseInt(useParams().userId )

@@ -13,6 +13,7 @@ import MessageIcon from "@mui/icons-material/Message";
 import User from "../../pages/user/EditUser";
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import RedeemIcon from '@mui/icons-material/Redeem';
 export const datas = [
   {
     title: "dashboard",
@@ -23,12 +24,7 @@ export const datas = [
         link: "/",
         id: 111,
       },
-      // {
-      //   icon: <AutoGraphIcon />,
-      //   name: "Analytics",
-      //   link: "/analytics",
-      //   id: 112,
-      // },
+     
       {
         icon:<PersonAddIcon/>,
         name:"New User",
@@ -40,7 +36,7 @@ export const datas = [
         name:"New Product",
         link:'/new_product',
         id:114
-      }
+      },
       // {
       //   icon: <ShowChartIcon />,
       //   name: "Sales",
@@ -64,12 +60,12 @@ export const datas = [
         link: "/products",
         id: 132,
       },
-      // {
-      //   icon: <MonetizationOnIcon />,
-      //   name: "Transaction",
-      //   link: "/transction",
-      //   id: 133,
-      // },
+      {
+        icon: <RedeemIcon />,
+        name: "Orders",
+        link: "/orders",
+        id: 133,
+      },
     ],
   },
   // {

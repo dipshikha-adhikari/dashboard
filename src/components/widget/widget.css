@@ -34,6 +34,10 @@ align-items: center;
 
 
 /* users  */
+.section_2{
+    margin-top: 2rem;
+
+}
 .new_users{
     display: grid;
     /* place-items: center; */
@@ -81,6 +85,7 @@ align-items: center;
 /* chart  */
 .widget .chart{
     height: 300px;
+    margin-top: 2rem;
 }
 .widget .chart .heading{
 width: fit-content;
@@ -90,11 +95,14 @@ color: var(--primary-2);
 
 
 /* media queries  */
+
 @media screen and (min-width:1000px) {
+ 
     .section_2{
     display: flex;
     align-items: start;
     gap: 1rem;
+
     }
     .section_2 .new_users{
       flex: 1;

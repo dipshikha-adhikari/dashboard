@@ -1,3 +1,4 @@
+import React from "react";
 export const incomeData = [
   {
     name: "Jan",
@@ -50,31 +51,159 @@ export const incomeData = [
  
 ];
 
-export  const userData = [
+export  const orderData = [
   {
     key: '1',
     name: 'John Brown',
     status: 'completed',
     address: 'New York No. 1 Lake Park',
-    // tags: ['nice', 'developer'],
     total:'$230'
   },
   {
     key: '2',
     name: 'Jim Green',
-    age: 42,
+    status: 'canceled',
     address: 'London No. 1 Lake Park',
-    // tags: ['loser'],
     total:'$210'
 
   },
   {
     key: '3',
     name: 'Joe Black',
-    age: 32,
+   status:'pending',
     address: 'Sydney No. 1 Lake Park',
-    // tags: ['cool', 'teacher'],
+    total:'$30'
+
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    status: 'canceled',
+    address: 'London No. 1 Lake Park',
+    total:'$210'
+
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+   status:'pending',
+    address: 'Sydney No. 1 Lake Park',
+    total:'$30'
+
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    status: 'canceled',
+    address: 'London No. 1 Lake Park',
+    total:'$210'
+
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+   status:'pending',
+    address: 'Sydney No. 1 Lake Park',
+    total:'$30'
+
+  },
+  {
+    key: '2',
+    name: 'Jim Green',
+    status: 'canceled',
+    address: 'London No. 1 Lake Park',
+    total:'$210'
+
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+   status:'pending',
+    address: 'Sydney No. 1 Lake Park',
     total:'$30'
 
   },
 ];
+
+export const orderColumns = [
+  {
+    title: 'No',
+    dataIndex: 'key',
+    key: 'key',
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: 'Status',
+    dataIndex: 'status',
+    key: 'status',
+  },
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+  },
+  {
+    title: 'Address',
+    dataIndex: 'address',
+    key: 'address',
+    width:200
+  },
+{
+        title: 'Total',
+        dataIndex: 'total',
+        key: 'total',
+      }   
+];
+
+
+export const salesData = [
+  {
+    type: 'cloth',
+    value: '27%',
+    amount:'$340'
+  },
+  {
+    type: 'food',
+    value: '23%',
+    amount:'$250'
+
+  },
+  {
+    type: 'watch',
+    value: '18%',
+    amount:'$140'
+
+  },
+  {
+    type: 'phone',
+    value: '12%',
+    amount:'$302'
+
+  },
+  {
+    type: 'other',
+    value: '20%',
+    amount:'$120'
+
+  },
+  
+]
+
+export const salesColumns = [
+  {
+    title: 'Items',
+    dataIndex: 'type',
+    key: 'type',
+    // render: (text) => <a>{text}</a>,
+  },
+  {
+    title: 'Percentage',
+    dataIndex: 'value',
+    key: 'value',
+  },
+  {
+    title: 'Amount',
+    dataIndex: 'amount',
+    key: 'amount',
+  },
+]
