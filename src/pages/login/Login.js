@@ -1,5 +1,6 @@
 import React from 'react'
 import './login.css'
+import Error from '../../components/error/Error'
 
 const Login = () => {
    
@@ -10,7 +11,7 @@ const Login = () => {
     <input type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)}/>
     <button onClick={handleClick}>Login</button>
    </form> */}
-   <span>No need of login 😉</span>
+  <Error/>
 </div>
   )
 }

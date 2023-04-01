@@ -48,81 +48,65 @@ export const incomeData = [
     name: "Dec",
     income: 3890,
   },
- 
+
 ];
 
-export  const orderData = [
+export const orderData = [
   {
     key: '1',
     name: 'John Brown',
     status: 'completed',
     address: 'New York No. 1 Lake Park',
-    total:'$230'
+    total: '$230'
   },
   {
     key: '2',
     name: 'Jim Green',
     status: 'canceled',
     address: 'London No. 1 Lake Park',
-    total:'$210'
+    total: '$210'
 
   },
   {
     key: '3',
     name: 'Joe Black',
-   status:'pending',
+    status: 'pending',
     address: 'Sydney No. 1 Lake Park',
-    total:'$30'
+    total: '$30'
 
   },
   {
-    key: '2',
+    key: '4',
     name: 'Jim Green',
     status: 'canceled',
     address: 'London No. 1 Lake Park',
-    total:'$210'
+    total: '$210'
 
   },
   {
-    key: '3',
+    key: '5',
     name: 'Joe Black',
-   status:'pending',
+    status: 'pending',
     address: 'Sydney No. 1 Lake Park',
-    total:'$30'
+    total: '$30'
 
   },
   {
-    key: '2',
+    key: '6',
     name: 'Jim Green',
     status: 'canceled',
     address: 'London No. 1 Lake Park',
-    total:'$210'
+    total: '$210'
 
   },
   {
-    key: '3',
+    key: '7',
     name: 'Joe Black',
-   status:'pending',
+    status: 'pending',
     address: 'Sydney No. 1 Lake Park',
-    total:'$30'
+    total: '$30'
 
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    status: 'canceled',
-    address: 'London No. 1 Lake Park',
-    total:'$210'
-
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-   status:'pending',
-    address: 'Sydney No. 1 Lake Park',
-    total:'$30'
-
-  },
+  }
 ];
 
 export const orderColumns = [
@@ -136,6 +120,16 @@ export const orderColumns = [
     title: 'Status',
     dataIndex: 'status',
     key: 'status',
+ 
+    render: (text) => {
+      return {
+        props: {
+          style: { color: text === 'canceled' ? 'red' : text === 'pending' ? '#E7B10A' : '#5D9C59' }
+        },
+        children: <span>{text}</span>
+      }
+    },
+
   },
   {
     title: 'Name',
@@ -146,13 +140,13 @@ export const orderColumns = [
     title: 'Address',
     dataIndex: 'address',
     key: 'address',
-    width:200
+    width: 200
   },
-{
-        title: 'Total',
-        dataIndex: 'total',
-        key: 'total',
-      }   
+  {
+    title: 'Total',
+    dataIndex: 'total',
+    key: 'total',
+  }
 ];
 
 
@@ -160,33 +154,33 @@ export const salesData = [
   {
     type: 'cloth',
     value: '27%',
-    amount:'$340'
+    amount: '$340'
   },
   {
     type: 'food',
     value: '23%',
-    amount:'$250'
+    amount: '$250'
 
   },
   {
     type: 'watch',
     value: '18%',
-    amount:'$140'
+    amount: '$140'
 
   },
   {
     type: 'phone',
     value: '12%',
-    amount:'$302'
+    amount: '$302'
 
   },
   {
     type: 'other',
     value: '20%',
-    amount:'$120'
+    amount: '$120'
 
   },
-  
+
 ]
 
 export const salesColumns = [
@@ -207,3 +201,6 @@ export const salesColumns = [
     key: 'amount',
   },
 ]
+
+
+

@@ -20,6 +20,8 @@ import EditUser from "./pages/user/EditUser";
 import NewUser from "./pages/user/NewUser";
 import UserList from './pages/user/UserList'
 import Orders from "./pages/orders/Orders";
+import MyCalendar from "./components/calendar/Calendar"
+import Error from "./components/error/Error";
 
 const Account = () => {
   return <div style={{textAlign:'center',padding:'2rem', fontSize:'1.5rem'}}>
@@ -63,7 +65,7 @@ const App = () => {
           >
             <Routes>
             <Route path="/" exact element={<Homepage />} />
-              <Route path="/login" element={<Login />} />
+              {/* <Route path="/login" element={<Login />} /> */}
               <Route path="/account" element={<Account />} />
               <Route path="/new_product" element={<NewProduct />} />
               <Route path="/new_user" element={<NewUser />} />
@@ -75,6 +77,8 @@ const App = () => {
               <Route path="/products/edit/:productId" element={<EditProduct />} />
               <Route path="/product/newProduct" element={<NewProduct />} />
               <Route path="/orders" element={<Orders/>}/>
+              <Route path="/calendar" element={<MyCalendar/>}/>
+              <Route path="*" element={<Error/>}/>
             </Routes>
  
           </div>

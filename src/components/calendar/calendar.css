@@ -1,0 +1,10 @@
+.btns{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.modal input{
+    outline: none;
+    padding: 5px;
+}

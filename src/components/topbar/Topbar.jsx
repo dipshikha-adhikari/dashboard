@@ -28,10 +28,10 @@ const Topbar = ({ isSidebarOpen, handleSidebar, closeSidebar }) => {
            <Link to='/notifications'>
               <NotificationsNone />
            </Link>
-           <Link>
+           <Link to='/language'>
               <LanguageIcon />
            </Link>
-           <Link>
+           <Link to='/setting'>
               <SettingsIcon />
            </Link>
 
