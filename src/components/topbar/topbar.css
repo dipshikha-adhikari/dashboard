@@ -16,6 +16,7 @@
 }
 .topbar .left {
   cursor: pointer;
+  display: grid;
 }
 .topbar .center {
   overflow: hidden;

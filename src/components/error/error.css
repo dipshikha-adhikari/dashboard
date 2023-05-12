@@ -9,7 +9,7 @@
   height: 88vh;
 }
 .error::after {
-  position: fixed;
+  position: absolute;
   content: "";
   width: 100%;
   height: 100%;
@@ -18,11 +18,11 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .error img {
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: auto;
   width: 100%;
-  height: 100vh;
+  height: 88vh;
   object-fit: cover;
 }
 

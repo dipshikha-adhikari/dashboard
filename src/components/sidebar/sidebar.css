@@ -7,7 +7,7 @@
   z-index: 9;
   left: -50%;
 
-  /* background: var(--secondary-1); */
+  background: white;
  height: 88vh;
  overflow-y: scroll;
   border-right: 1px solid rgb(229, 225, 225);
@@ -48,11 +48,10 @@
 }
 @media screen and (min-width: 920px) {
   .sidebar_container {
-   
     left: auto;
     width:250px;
     z-index: 2;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .other_content {
@@ -75,7 +74,6 @@
 }
 .sidebar_links .sidebar_link {
   list-style: none;
-  margin-left: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -90,6 +88,7 @@
 .sidebar_wrapper .bottom{
   display: grid;
   gap: 1rem;
+  padding: 1rem 0;
 
 }
 .sidebar_wrapper .bottom .btm_link{

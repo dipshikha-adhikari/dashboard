@@ -5,6 +5,7 @@ import Modal from '../../components/modal/Modal'
 const NewProduct = () => {
 const[isAdding, setIsAdding] = useState(false)
 const{state,dispatch} = useContext(context)
+
 const[product, setProduct] = useState({
    id:new Date().getUTCMilliseconds(),
    title:'',

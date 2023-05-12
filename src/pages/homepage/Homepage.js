@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./homepage.css";
 import Widget from "../../components/widget/Widget";
 import Table from '../../components/table/Table'
-import { orderColumns,  salesColumns, salesData } from '../../components/utils/data';
+import { orderColumns,  salesColumns, salesData } from '../../assets/data';
 import PieChart from "../../components/pieChart";
 import {  Input, Select } from "antd";
 import { context } from "../../context";

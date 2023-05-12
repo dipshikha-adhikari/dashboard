@@ -53,14 +53,14 @@ export const incomeData = [
 
 export const orderData = [
   {
-    key: '1',
+    key: '11',
     name: 'John Brown',
     status: 'completed',
     address: 'New York No. 1 Lake Park',
     total: '$230'
   },
   {
-    key: '2',
+    key: '12',
     name: 'Jim Green',
     status: 'canceled',
     address: 'London No. 1 Lake Park',
@@ -68,7 +68,7 @@ export const orderData = [
 
   },
   {
-    key: '3',
+    key: '13',
     name: 'Joe Black',
     status: 'pending',
     address: 'Sydney No. 1 Lake Park',
@@ -76,7 +76,7 @@ export const orderData = [
 
   },
   {
-    key: '4',
+    key: '14',
     name: 'Jim Green',
     status: 'canceled',
     address: 'London No. 1 Lake Park',
@@ -84,7 +84,7 @@ export const orderData = [
 
   },
   {
-    key: '5',
+    key: '15',
     name: 'Joe Black',
     status: 'pending',
     address: 'Sydney No. 1 Lake Park',
@@ -92,7 +92,7 @@ export const orderData = [
 
   },
   {
-    key: '6',
+    key: '16',
     name: 'Jim Green',
     status: 'canceled',
     address: 'London No. 1 Lake Park',
@@ -100,7 +100,7 @@ export const orderData = [
 
   },
   {
-    key: '7',
+    key: '17',
     name: 'Joe Black',
     status: 'pending',
     address: 'Sydney No. 1 Lake Park',
@@ -121,7 +121,7 @@ export const orderColumns = [
     dataIndex: 'status',
     key: 'status',
  
-    render: (text) => {
+    onCell: (text) => {
       return {
         props: {
           style: { color: text === 'canceled' ? 'red' : text === 'pending' ? '#E7B10A' : '#5D9C59' }
@@ -152,29 +152,38 @@ export const orderColumns = [
 
 export const salesData = [
   {
+    key:'112',
     type: 'cloth',
     value: '27%',
     amount: '$340'
   },
   {
+    key:'113',
+
     type: 'food',
     value: '23%',
     amount: '$250'
 
   },
   {
+    key:'114',
+
     type: 'watch',
     value: '18%',
     amount: '$140'
 
   },
   {
+    key:'115',
+
     type: 'phone',
     value: '12%',
     amount: '$302'
 
   },
   {
+    key:'116',
+
     type: 'other',
     value: '20%',
     amount: '$120'

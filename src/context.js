@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import {  reducer } from "./reducer";
-import { orderData } from "./components/utils/data";
+import { orderData } from "./assets/data";
 
 export const initialState = {
     data: orderData,
@@ -44,7 +44,8 @@ export const initialState = {
     userCount:1400,
     prevUserCount:1250,
     productCount:80,
-    prevProductCount:90
+    prevProductCount:90,
+    isSidebarOpen:false
 }
 
 

@@ -49,18 +49,30 @@ export const reducer = (state, action) => {
                 return { ...state, filteredData };
             }
         }
-        case 'FILTER_BY_STATUS' : {
-const filteredData = state.data.filter(item => {
-   if(action.payload === 'all'){
-    return item
-   }else{
-return action.payload === item.status
-   }
-  
-})
-return {...state, filteredData}
-}
+        case 'FILTER_BY_STATUS': {
+            const filteredData = state.data.filter(item => {
+                if (action.payload === 'all') {
+                    return item
+                } else {
+                    return action.payload === item.status
+                }
 
+            })
+            return { ...state, filteredData }
+
+        }
+        case 'CLOSE_SIDEBAR': {
+            return {
+                ...state,
+                isSidebarOpen: false
+            }
+        }
+        case 'OPEN_SIDEBAR': {
+            return {
+                ...state,
+                isSidebarOpen: true
+            }
+        }
         default: return state
     }
 
