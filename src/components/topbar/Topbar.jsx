@@ -28,20 +28,17 @@ const Topbar = () => {
         }}
       >
         {/* left */}
-        <div className="left" onClick={handleMenu}>
-          {state.isSidebarOpen ? <CloseIcon /> : <MenuIcon className="menu" />}
+        <div className="left" >
+          <Link to='/' className="logo">SMS</Link>
+      <span className="menu_icon" onClick={handleMenu}>    {state.isSidebarOpen ? <CloseIcon /> : <MenuIcon className="menu" /> } </span>
         </div>
 
-        {/* center  */}
-        <div className="center">
-          <div className="logo">myAdmin</div>
-        </div>
 
         {/* right  */}
         <div className="right">
           <div className="topbar_icons">
             <Link to="/login" className="login">
-              login
+              {/* login */}
             </Link>
 
             <Link to="/notifications">

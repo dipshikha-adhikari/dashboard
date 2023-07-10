@@ -2,42 +2,43 @@
 export const reducer = (state, action) => {
 
     switch (action.type) {
-        case 'ADD_USER': {
-            const newUser = action.payload
-            const userCount = state.userCount + 1
-            return { ...state, users: [...state.users, newUser], userCount }
+        case 'ADD_STUDENT': {
+            const newStudent = action.payload
+            const studentsCount = state.studentsCount + 1
+            localStorage.setItem('students', {students: [...state.students, newStudent], studentsCount})
+            return { ...state, students: [...state.students, newStudent], studentsCount }
         }
-        case 'DELETE_USER': {
-            //  let users = [...state.users]
-            const userCount = state.userCount - 1
-            let updatedUsers = state.users.filter(u => u.id !== action.payload)
-            return { ...state, users: updatedUsers, userCount }
-        }
-
-        case 'EDIT_USER': {
-            const users = [...state.users]
-            const index = state.users.findIndex(user => user.id === action.payload.id)
-            users[index] = action.payload
-            return { ...state, users }
+        case 'DELETE_STUDENT': {
+            //  let studentss = [...state.studentss]
+            const studentsCount = state.studentsCount - 1
+            let updatedStudents = state.students.filter(u => u.id !== action.payload)
+            return { ...state, students: updatedStudents, studentsCount }
         }
 
-        case 'ADD_PRODUCT': {
-            const newProduct = action.payload
-            const productCount = state.productCount + 1
-            return { ...state, products: [...state.products, newProduct], productCount }
+        case 'EDIT_STUDENT': {
+            const students = [...state.students]
+            const index = state.students.findIndex(students => students.id === action.payload.id)
+            students[index] = action.payload
+            return { ...state, students }
         }
 
-        case 'DELETE_PRODUCT': {
-            const productCount = state.productCount - 1
-            const index = state.products.findIndex(user => user.id === action.payload)
-            const updatedProducts = state.products.filter((p, i) => i !== index)
-            return { ...state, products: updatedProducts, productCount }
+        case 'ADD_TEACHER': {
+            const newTeacher = action.payload
+            const teachersCount = state.teachersCount + 1
+            return { ...state, teachers: [...state.teachers, newTeacher], teachersCount }
         }
-        case 'EDIT_PRODUCT': {
-            const products = [...state.products]
-            const index = products.findIndex(product => product.id === action.payload.id)
-            products[index] = action.payload
-            return { ...state, products }
+
+        case 'DELETE_TEACHER': {
+            const teachersCount = state.teachersCount - 1
+            const index = state.teachers.findIndex(teacher => teacher.id === action.payload)
+            const updatedTeachers = state.teachers.filter((p, i) => i !== index)
+            return { ...state, teachers: updatedTeachers, teachersCount }
+        }
+        case 'EDIT_TEACHER': {
+            const teachers = [...state.teachers]
+            const index = teachers.findIndex(teacher => teacher.id === action.payload.id)
+            teachers[index] = action.payload
+            return { ...state, teachers }
         }
         case 'FILTER_BY_NAME': {
             const filterKey = action.payload

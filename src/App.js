@@ -1,32 +1,21 @@
 import React, { useContext } from "react";
 import "./index.css";
-
 import {
   Routes,
   Route,
 } from "react-router-dom";
-
-import { Product, User, ProductList, NewProduct, EditProduct, EditUser, NewUser, UserList, Orders, Homepage, Login } from "./pages";
+import { Student, Teacher, StudentsList, NewStudent,Transactions, EditStudent, EditTeacher, NewTeacher, TeachersList, Homepage, Login } from "./pages";
 import { Calendar, Error, Sidebar, Topbar } from "./components";
 import { context } from "./context";
-
-const Account = () => {
-  return <div style={{ textAlign: 'center', padding: '2rem', fontSize: '1.5rem' }}>
-    <span>You are not registered 😐</span>
-  </div>
-}
 
 
 const App = () => {
   const { state, dispatch } = useContext(context)
 
-
-
   return (
     <>
       <div className="app ">
         <Topbar
-
         />
         <div className="app_main" >
           <div
@@ -37,7 +26,6 @@ const App = () => {
           >
             <Sidebar />
           </div>
-
           <div
             className={`${state.isSidebarOpen ? "push_other_content" : "other_content"
               }`}
@@ -47,21 +35,20 @@ const App = () => {
               <Route path="/" element={<Homepage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/account" element={<Account />} />
-              <Route path="/new_product" element={<NewProduct />} />
-              <Route path="/new_user" element={<NewUser />} />
-              <Route path="/userlist" element={<UserList />} />
-              <Route path="/userlist/:userId" element={<User />} />
-              <Route path="/userlist/edit/:userId" element={<EditUser />} />
-              <Route path="/products" element={<ProductList />} />
-              <Route path="/products/:productId" element={<Product />} />
-              <Route path="/products/edit/:productId" element={<EditProduct />} />
-              <Route path="/product/newProduct" element={<NewProduct />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/login" element={<Login/>}/>
+              <Route path="/students/new" element={<NewStudent />} />
+              <Route path="/teachers/new" element={<NewTeacher />} />
+              <Route path="/teachers" element={<TeachersList />} />
+              <Route path="/teachers/:id" element={<Teacher />} />
+              <Route path="/teachers/edit/:id" element={<EditTeacher />} />
+              <Route path="/students" element={<StudentsList />} />
+              <Route path="/students/:id" element={<Student />} />
+              <Route path="/students/edit/:id" element={<EditStudent />} />
+              <Route path="/students/new" element={<NewStudent />} />
+              <Route path="/transactions" element={<Transactions />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="*" element={<Error />} />
             </Routes>
-
           </div>
         </div>
       </div>
@@ -72,5 +59,10 @@ const App = () => {
 export default App;
 
 
+const Account = () => {
+  return <div style={{ textAlign: 'center', padding: '2rem' }}>
+    <span>You are not registered 😐</span>
+  </div>
+}
 
 

@@ -10,7 +10,7 @@ const Login = () => {
     <input type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)}/>
     <button onClick={handleClick}>Login</button>
    </form> */}
-   <span>No need of login, this is a demo app</span>
+   <span>Login is not available yet.</span>
 </div>
   )
 }

@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import "./homepage.css";
 import Widget from "../../components/widget/Widget";
-import Table from '../../components/table/Table'
-import { orderColumns,  salesColumns, salesData } from '../../assets/data';
+import {  talentsInSubjects, talentsInSubjectsColumns, transactionsColumns } from '../../data'
 import PieChart from "../../components/pieChart";
-import {  Input, Select } from "antd";
+import {  Input, Select, Table } from "antd";
 import { context } from "../../context";
 
 
@@ -33,7 +32,7 @@ dispatch({type:'FILTER_BY_STATUS', payload: e})
      </div>
         <Widget/>
       <div className='orders'>
-<h4 className="heading">Recent orders</h4>
+<h4 className="heading">Recent transactions</h4>
 <Input
           placeholder="Search by name"
           onChange={handleNameSearch}
@@ -55,16 +54,16 @@ dispatch({type:'FILTER_BY_STATUS', payload: e})
           <Option value="canceled">Canceled</Option>
           <Option value="pending">Pending</Option>
         </Select>
-      <Table data={filteredData} columns={orderColumns}/>
+      <Table dataSource={filteredData} columns={transactionsColumns}  scroll={{ x: true }}  pagination={{ pageSize: 5 }}/>
         </div>
 
         <div className="most_sales">
-          <h4 className="heading">Most sold items</h4>
+          <h4 className="heading">Most talented students</h4>
           <div className="data">
          <div className="chart">
          <PieChart/>
          </div>
-         <Table data={salesData} columns={salesColumns} />
+         <Table dataSource={talentsInSubjects} columns={talentsInSubjectsColumns} scroll={{ x: true }}  pagination={{ pageSize: 5 }} />
           </div>
         </div>
     </div>

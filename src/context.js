@@ -1,60 +1,32 @@
 import React, { createContext, useReducer } from "react";
-import {  reducer } from "./reducer";
-import { orderData } from "./assets/data";
+import { reducer } from "./reducer";
+import { students, teachers, toppers, transactionsData } from "./data";
 
 export const initialState = {
-    data: orderData,
-  filteredData: orderData,
-  statusFilter: 'status',
-    users:[
-{
-    id: 1, 
-    username: 'bivash', 
-    email: 'akbivash@gmail.com', 
-    phone: '9807559979', 
-    fullName: 'Bivash Adhikari',
-    address:'Kathmandu'
-},
-{
-    id: 2, 
-    username: 'jessi7', 
-    email: 'jessi@gmail.com', 
-    phone: '9807562979', 
-    fullName: 'Jessi Ale',
-    address:'Banepa'
-}
-    ],
-    products:[
-{
-    id:121,
-    title:'Nike hoodie',
-    price:'45',
-    img:'https://m.media-amazon.com/images/I/61xawq2UArL._AC_UF1000,1000_QL80_.jpg',
-    inStock:'yes'
-},
-{
-    id:122,
-    title:'Adidas Cap',
-    price:'15',
-    img:'https://assets.adidas.com/images/w_600,f_auto,q_auto/9382df3f01f54fbf9a14a9610123ec22_9366/Trefoil_Baseball_Cap_Black_EC3603_01_standard.jpg',
-    inStock:'no'
-}
-    ],
-    isUpdating:false ,
-    userCount:1400,
-    prevUserCount:1250,
-    productCount:80,
-    prevProductCount:90,
-    isSidebarOpen:false
+    data: transactionsData,
+    filteredData: transactionsData,
+    statusFilter: 'status',
+    teachers: teachers,
+    students: students,
+    toppers: toppers,
+    isUpdating: false,
+    studentsCount: 14,
+    prevMonthStudentsCount: 10,
+    prevYearStudentsCount: 5,
+    teachersCount: 4,
+    prevTeachersCount: 3,
+    prevCourseCount: 400,
+    courseCount: 392,
+    isSidebarOpen: false
 }
 
 
 export const context = createContext(initialState)
-export const AppProvider = ({children}) =>{
-const[state, dispatch] = useReducer(reducer, initialState)
+export const AppProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(reducer, initialState)
 
 
-return <context.Provider value={{state,dispatch}}>
-    {children}
-</context.Provider>
+    return <context.Provider value={{ state, dispatch }}>
+        {children}
+    </context.Provider>
 }

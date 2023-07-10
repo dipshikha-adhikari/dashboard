@@ -1,31 +1,31 @@
-.edit_user {
+.edit_student {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.edit_user .heading {
+.edit_student .heading {
   text-align: center;
 }
-.edit_user form {
+.edit_student form {
   display: grid;
   gap: 1rem;
 }
 
-.edit_user form .form_control {
+.edit_student form .form_control {
   display: grid;
   gap: 5px;
 }
 
-.edit_user .form_control input {
+.edit_student .form_control input {
   outline: none;
   border: none;
   border: 1px solid rgb(215, 214, 214);
   padding: 8px 14px;
 }
 
-.edit_user form .update,
+.edit_student form .update,
 .edit_btn {
   background: var(--primary-1);
   border: none;
@@ -39,16 +39,16 @@
   margin: 1rem 0;
   width: fit-content;
 }
-.edit_user form .update:disabled {
+.edit_student form .update:disabled {
   opacity: 0.5;
 }
 
-/* user page  */
-.user {
+/* student page  */
+.student {
   display: grid;
   place-items: center;
 }
-.user .info {
+.student .info {
   display: grid;
   place-items: center;
   gap: 1rem;
@@ -56,8 +56,8 @@
 .edit_btn {
 }
 
-/* userlist  */
-.userlist_table{
+/* students  */
+.students_table{
   height: 480px;
     padding: 1rem 2rem;
     width: 100%;
@@ -65,23 +65,23 @@ background: #fff;
 overflow-x: scroll;
 }
 
-.userlist_table .userlist_edit{
+.students_table .edit{
     margin-right: 10px;
 }
 
-.userlist_table .userlist_user{
+.students_table .students_student{
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.userlist_table .userlist_image{
+.students_table .students_image{
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-.userlist_edit{
+.edit{
     background:green;
     color:#fff;
     border:none;
@@ -89,24 +89,25 @@ overflow-x: scroll;
     border-radius: 4px;
     text-decoration: none;
 }
-.userlist_delete{
+.delete{
     color:red;
     margin-left:2rem;
     cursor: pointer;
 }
 
-/* new user  */
-.new_user {
+/* new student  */
+.new_student {
     width: 100%;
     transition: .4s;
-    padding: 0 10px;
+    padding:  10px;
  }
  
- .new_user .header{
+ .new_student .heading{
     text-align: center;
     color: var(--primary-1);
+   
  }
- .new_user form{
+ .new_student form{
 width: 100%;
     display: grid;
     gap: 1rem;
@@ -115,11 +116,11 @@ margin:0 auto;
  }
 
 
- .new_user form .form_control{
+ .new_student form .form_control{
     display: grid;
     gap: 5px 0;
  }
- .new_user .form_control label{
+ .new_student .form_control label{
     font-weight: 500;
  }
  .form_control input{
@@ -130,7 +131,7 @@ margin:0 auto;
     width:100%;
  }
 
- .new_user form  .create{
+ .new_student form  .create{
     width: 150px;
     font-size: 1.4rem;
     border: none;
@@ -140,6 +141,6 @@ margin:0 auto;
     border-radius: 8px;
     cursor:pointer;
  }
- .new_user form  .create:disabled{
+ .new_student form  .create:disabled{
    opacity:0.5;
  }

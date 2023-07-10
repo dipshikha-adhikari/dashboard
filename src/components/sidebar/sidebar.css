@@ -61,7 +61,7 @@
  
 }
 
-.sidebar .sidebar_wrapper .top {
+.sidebar_wrapper .top {
   display: grid;
   gap: 1rem;
 }
