@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { orderColumns, orderData } from "../../assets/data";
-import Table from "../../components/table/Table";
-
+import {Table} from 'antd'
 import { Input, Select } from "antd";
 import { context } from "../../context";
+import { transactionsColumns } from "../../data";
 
-const Orders = () => {
+const Transactions = () => {
   const { Option } = Select;
   const { state, dispatch } = useContext(context);
   const filteredData = state.filteredData;
@@ -42,10 +41,10 @@ const Orders = () => {
           <Option value="canceled">Canceled</Option>
           <Option value="pending">Pending</Option>
         </Select>
-        <Table data={filteredData} columns={orderColumns} />
+        <Table dataSource={filteredData} columns={transactionsColumns} scroll={{ x: true }}  pagination={{ pageSize: 5 }}/>
       </div>
     </div>
   );
 };
 
-export default Orders;
+export default Transactions

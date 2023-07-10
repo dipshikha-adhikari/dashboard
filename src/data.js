@@ -1,4 +1,5 @@
 import React from "react";
+
 export const incomeData = [
   {
     name: "Jan",
@@ -51,11 +52,12 @@ export const incomeData = [
 
 ];
 
-export const orderData = [
+export const transactionsData = [
   {
     key: '11',
     name: 'John Brown',
     status: 'completed',
+    class: 10,
     address: 'New York No. 1 Lake Park',
     total: '$230'
   },
@@ -63,6 +65,7 @@ export const orderData = [
     key: '12',
     name: 'Jim Green',
     status: 'canceled',
+    class: 10,
     address: 'London No. 1 Lake Park',
     total: '$210'
 
@@ -70,6 +73,7 @@ export const orderData = [
   {
     key: '13',
     name: 'Joe Black',
+    class: 9,
     status: 'pending',
     address: 'Sydney No. 1 Lake Park',
     total: '$30'
@@ -78,6 +82,7 @@ export const orderData = [
   {
     key: '14',
     name: 'Jim Green',
+    class: 8,
     status: 'canceled',
     address: 'London No. 1 Lake Park',
     total: '$210'
@@ -86,6 +91,7 @@ export const orderData = [
   {
     key: '15',
     name: 'Joe Black',
+    class: 9,
     status: 'pending',
     address: 'Sydney No. 1 Lake Park',
     total: '$30'
@@ -94,6 +100,7 @@ export const orderData = [
   {
     key: '16',
     name: 'Jim Green',
+    class: 7,
     status: 'canceled',
     address: 'London No. 1 Lake Park',
     total: '$210'
@@ -102,6 +109,7 @@ export const orderData = [
   {
     key: '17',
     name: 'Joe Black',
+    class: 10,
     status: 'pending',
     address: 'Sydney No. 1 Lake Park',
     total: '$30'
@@ -109,7 +117,7 @@ export const orderData = [
   }
 ];
 
-export const orderColumns = [
+export const transactionsColumns = [
   {
     title: 'No',
     dataIndex: 'key',
@@ -120,7 +128,7 @@ export const orderColumns = [
     title: 'Status',
     dataIndex: 'status',
     key: 'status',
- 
+
     onCell: (text) => {
       return {
         props: {
@@ -137,6 +145,11 @@ export const orderColumns = [
     key: 'name',
   },
   {
+    title: 'Class',
+    dataIndex: 'class',
+    key: 'class',
+  },
+  {
     title: 'Address',
     dataIndex: 'address',
     key: 'address',
@@ -150,49 +163,38 @@ export const orderColumns = [
 ];
 
 
-export const salesData = [
+export const talentsInSubjects = [
   {
-    key:'112',
-    type: 'cloth',
+    key: '112',
+    type: 'Science',
     value: '27%',
-    amount: '$340'
   },
   {
-    key:'113',
+    key: '113',
 
-    type: 'food',
+    type: 'Math',
     value: '23%',
-    amount: '$250'
 
   },
   {
-    key:'114',
+    key: '114',
 
-    type: 'watch',
-    value: '18%',
-    amount: '$140'
-
-  },
-  {
-    key:'115',
-
-    type: 'phone',
-    value: '12%',
-    amount: '$302'
+    type: 'English',
+    value: '40%',
 
   },
   {
-    key:'116',
+    key: '115',
 
     type: 'other',
-    value: '20%',
-    amount: '$120'
+    value: '50%',
 
-  },
+  }
+
 
 ]
 
-export const salesColumns = [
+export const talentsInSubjectsColumns = [
   {
     title: 'Items',
     dataIndex: 'type',
@@ -204,12 +206,128 @@ export const salesColumns = [
     dataIndex: 'value',
     key: 'value',
   },
-  {
-    title: 'Amount',
-    dataIndex: 'amount',
-    key: 'amount',
-  },
+
 ]
 
 
+export const  students = [
+  {
+      id: 1,
+      rollNo: 1,
+      name: 'Bivash Adhikari',
+      phone: '9807543210',
+      parent: 'Dip Adhikari',
+      address: 'Kapilvastu',
+      class: 10
+  },
+  {
+      id: 2,
+      rollNo: 2,
+      name: 'Sameer Fuddi',
+      phone: '9804320000',
+      parent: 'Bhuwan Bam',
+      address: 'Delhi',
+      class: 10
 
+  },
+  {
+      id: 3,
+      rollNo: 3,
+      name: 'John Lenon',
+      phone: '9800320000',
+      parent: 'The Beatles',
+      address: 'London',
+      class: 7
+
+  },
+  {
+      id: 4,
+      rollNo: 4,
+      name: 'Ronaldo JR',
+      phone: '9801320000',
+      parent: 'Cristiano Ronaldo',
+      address: 'Portugal',
+      class: 8
+
+  },
+  {
+      id: 5,
+      rollNo: 5,
+      name: 'Suman Karki',
+      phone: '9800320001',
+      parent: 'Bir Karki',
+      address: 'Butwal',
+      class: 9
+
+  },
+  {
+      id: 6,
+      rollNo: 6,
+      name: 'Paul',
+      phone: '9801320002',
+      parent: 'Santos',
+      address: 'London',
+      class: 5
+
+  },
+  {
+      id: 7,
+      rollNo: 21,
+      name: 'Mick Jagger',
+      phone: '9801320002',
+      parent: 'Laminar Jagger',
+      address: 'USA',
+      class: 6
+
+
+  },
+  {
+      id: 6,
+      rollNo: 20,
+      name: 'Pogba',
+      phone: '9801320002',
+      parent: 'Modric',
+      address: 'France',
+      class: 5
+
+  }
+]
+
+
+export const  teachers = [
+  {
+      id: 121,
+      name: 'Elon Musk',
+      periods: 4,
+      subjects: ['Science, Math'],
+      phone: '98000000',
+      classes: [10, 12],
+      image: 'https://images-prod.dazeddigital.com/900/azure/dazed-prod/1340/4/1344788.jpg',
+
+  },
+
+]
+
+export const toppers = [
+  {
+      rollNo: 1,
+      class: 10
+  }, {
+      rollNo: 5,
+      class: 9
+  }, {
+      rollNo: 6,
+      class: 5
+
+  }, {
+      rollNo: 3,
+      class: 8
+
+  }, {
+      rollNo: 4,
+      class: 7
+  }, {
+      rollNo: 21,
+      class: 6
+  }
+]

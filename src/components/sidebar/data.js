@@ -10,10 +10,10 @@ import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantity
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import MessageIcon from "@mui/icons-material/Message";
-import User from "../../pages/user/EditUser";
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RedeemIcon from '@mui/icons-material/Redeem';
+
 export const datas = [
   {
     title: "dashboard",
@@ -27,14 +27,14 @@ export const datas = [
      
       {
         icon:<PersonAddIcon/>,
-        name:"New User",
-        link:'/new_user',
+        name:"New Student",
+        link:'/students/new',
         id:113
       },
       {
         icon:<AddCircleIcon/>,
-        name:"New Product",
-        link:'/new_product',
+        name:"New Teacher",
+        link:'/teachers/new',
         id:114
       },
       // {
@@ -50,20 +50,20 @@ export const datas = [
     sublinks: [
       {
         icon: <PeopleIcon />,
-        name: "Users",
-        link: "/userlist",
+        name: "Students",
+        link: "/students",
         id: 131,
       },
       {
         icon: <ProductionQuantityLimitsIcon />,
-        name: "Products",
-        link: "/products",
+        name: "Teachers",
+        link: "/teachers",
         id: 132,
       },
       {
         icon: <RedeemIcon />,
-        name: "Orders",
-        link: "/orders",
+        name: "Transactions",
+        link: "/transactions",
         id: 133,
       },
     ],

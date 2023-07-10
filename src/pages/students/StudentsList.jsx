@@ -2,42 +2,34 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import DeleteIcon from "@mui/icons-material/Delete";
-
-import "./user.css";
+import "./student.css";
 import { Link } from "react-router-dom";
 import { context } from "../../context";
 
-
-
  
-export default function DataGridDemo() {
+export default function StudentsList() {
   const {state,dispatch} = React.useContext(context)
-  const {users} = state 
+  const {students} = state 
 
   const columns = [
-    { field: "id", headerName: "ID", width: 50 },
+    { field: "id", headerName: "ID", minWidth: 50},
+
+    { field: "rollNo", headerName: "Roll No", minWidth: 100, flex:1 },
   
     {
-      field: "username",
-      headerName: "Username",
+      field: "name",
+      headerName: "Name",
       minWidth: 150,
       flex: 1,
   
     },
     {
-      field: "email",
-      headerName: "Email",
+      field: "class",
+      headerName: "Class",
       minWidth: 150,
       flex: 1,
     
     },
-    {
-      field: "fullName",
-      headerName: "Fullname",
-      minWidth: 150,
-      flex: 1,
-    },
-    
     {
       field: "address",
       headerName: "Address",
@@ -46,16 +38,24 @@ export default function DataGridDemo() {
     },
     
     {
+      field: "parent",
+      headerName: "Parent",
+      minWidth: 150,
+      flex: 1,
+    },
+    
+    {
       field: "action",
       headerName: "Action",
-      width: 110,
+      minWidth: 150,
+      flex: 1,
       renderCell: (params) => {
         return (
           <>
-            <Link to={`/userlist/edit/${params.row.id}`} className="userlist_edit">
+            <Link to={`/students/edit/${params.row.id}`} className="edit">
               Edit
             </Link>
-            <DeleteIcon className="userlist_delete" onClick={() => handleDelete(params.row.id)}/>
+            <DeleteIcon className="delete" onClick={() => handleDelete(params.row.id)}/>
           </>
         );
       },
@@ -64,15 +64,15 @@ export default function DataGridDemo() {
 
 function handleDelete(id){
   dispatch({
-    type:'DELETE_USER',
+    type:'DELETE_STUDENT',
     payload:id
   })
 }
   return (
-    <Box className="userlist_table">
+    <Box className="students_table">
       <DataGrid
         style={{ width: "100%" }}
-        rows={users}
+        rows={students}
         columns={columns}
         pageSize={5}
         rowsPerPageOptions={[5]}

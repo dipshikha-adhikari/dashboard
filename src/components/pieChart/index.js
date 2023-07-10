@@ -4,25 +4,21 @@ import { Pie } from '@ant-design/plots';
 const PieChart = () => {
   const data = [
     {
-      type: 'cloth',
+      type: 'Science',
       value: 27,
     },
     {
-      type: 'food',
-      value: 25,
+      type: 'Math',
+      value: 23,
     },
     {
-      type: 'watch',
-      value: 18,
-    },
-    {
-      type: 'phone',
-      value: 15,
+      type: 'English',
+      value: 40,
     },
     {
       type: 'other',
       value: 10,
-    },
+    }
 
   ];
   const config = {

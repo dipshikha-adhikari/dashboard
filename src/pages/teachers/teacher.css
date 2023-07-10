@@ -1,7 +1,7 @@
-.product{
+.edit_teacher{
   padding:0 10px;
 }
-.product form{
+.edit_teacher form{
     display: grid;
     gap: 1rem;
    max-width: 400px;
@@ -11,20 +11,20 @@
 }
 
 
-.product  img{
+.edit_teacher  img{
 width: 200px;
 height: 200px;
-border-radius: 100%;
+object-fit: cover;
 }
 
-.product  .form_control{
+.edit_teacher  .form_control{
    display: grid;
    gap: 10px;
 }
-.product .form_control select{
+.edit_teacher .form_control select{
     width: fit-content;
 }
-.product  .update_btn {
+.edit_teacher  .update_btn {
     padding: 5px 10px;
     background: var(--primary-1);
     border: none;
@@ -34,7 +34,7 @@ border-radius: 100%;
     margin: 0 auto;
   cursor:pointer;
 }
-.product .update_btn:disabled{
+.edit_teacher .update_btn:disabled{
     opacity: 0.5;
 }
 
@@ -42,19 +42,18 @@ border-radius: 100%;
 /* productlist  */
 
 
-.product_list .table {
+.teachers_list .table {
     margin: 0 auto;
-padding: 1rem;
    max-width: 1000px;
 
 }
-.product_list .table .action{
+.teachers_list .table .action{
     display: flex;
     gap: 1rem;
     align-items: center;
     border: none;
 }
-.product_list .table .product_edit{
+.teachers_list .table .teacher_edit{
     background: green;
     padding: 5px 15px;
     border-radius: 5px;
@@ -62,39 +61,40 @@ padding: 1rem;
     color: #fff;
     text-decoration:none;
 }
-.product_list .table .product_delete{
+.teachers_list .table .teacher_delete{
     color: red;
     margin-left:2rem;
     cursor:pointer;
 }
-.product_list .table .product_image{
+.teachers_list .table .teacher_image{
  
-    width: 300px;
+    width:100%;
     height: 100%;
-
+    border-radius: 50%;
+    object-fit: cover;
 }
 /* new product  */
-.new_product{
+.new_teacher{
     display: grid;
   padding:0 10px;
 }
-.new_product .heading{
+.new_teacher .heading{
     text-align: center;
     color:var(--primary-1)
 }
-.new_product form {
+.new_teacher form {
     margin: 0 auto;
     display: grid;
     gap: 15px;
 max-width: 500px;
 
 }
-.new_product form .form_control{
+.new_teacher form .form_control{
     display: grid;
     gap: 5px;
 }
 
-.new_product form .create_btn{
+.new_teacher form .create_btn{
     margin: 1rem 0;
     padding:10px  15px;
     width: fit-content;
@@ -105,9 +105,9 @@ max-width: 500px;
     color: #fff;
     cursor:pointer;
 }
-.new_product form .create_btn:disabled{
+.new_teacher form .create_btn:disabled{
     opacity:0.5;
 }
-.new_product form .form_control .select  {
+.new_teacher form .form_control .select  {
     width: 140px;
 }
