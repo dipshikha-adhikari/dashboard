@@ -4,12 +4,11 @@ export const reducer = (state, action) => {
     switch (action.type) {
         case 'ADD_STUDENT': {
             const newStudent = action.payload
+            state.newStudents.push(action.payload)
             const studentsCount = state.studentsCount + 1
-            localStorage.setItem('students', {students: [...state.students, newStudent], studentsCount})
             return { ...state, students: [...state.students, newStudent], studentsCount }
         }
         case 'DELETE_STUDENT': {
-            //  let studentss = [...state.studentss]
             const studentsCount = state.studentsCount - 1
             let updatedStudents = state.students.filter(u => u.id !== action.payload)
             return { ...state, students: updatedStudents, studentsCount }

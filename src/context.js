@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import { reducer } from "./reducer";
-import { students, teachers, toppers, transactionsData } from "./data";
+import { newStudents, students, teachers, toppers, transactionsData } from "./data";
 
 export const initialState = {
     data: transactionsData,
@@ -8,6 +8,8 @@ export const initialState = {
     statusFilter: 'status',
     teachers: teachers,
     students: students,
+    newStudents:newStudents,
+    newStudentsCount:newStudents.length,
     toppers: toppers,
     isUpdating: false,
     studentsCount: 14,

@@ -15,8 +15,8 @@ const Chart = () => {
   ];
 
   return  <LineChart
-  height={400}
-  series={[{ data: uData, label: 'uv', area: true , color:'rgb(5, 146, 113)'}]}
+  className='line_chart'
+  series={[{ data: uData, label: 'percentage', area: true , color:'rgb(5, 146, 113)'}]}
   xAxis={[{ scaleType: 'point', data: xLabels }]}
   sx={{
     '.MuiLineElement-root, .MuiMarkElement-root': {
