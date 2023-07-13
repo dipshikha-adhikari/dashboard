@@ -209,6 +209,47 @@ export const talentsInSubjectsColumns = [
 
 ]
 
+export const newStudents = [
+  {
+    id: 131,
+    rollNo: 1,
+    name: 'Bivash Adhikari',
+    phone: '9807543210',
+    parent: 'Dip Adhikari',
+    address: 'Kapilvastu',
+    class: 10
+},
+{
+    id: 132,
+    rollNo: 2,
+    name: 'Sameer Fuddi',
+    phone: '9804320000',
+    parent: 'Bhuwan Bam',
+    address: 'Delhi',
+    class: 10
+
+},
+{
+    id: 133,
+    rollNo: 3,
+    name: 'John Lenon',
+    phone: '9800320000',
+    parent: 'The Beatles',
+    address: 'London',
+    class: 7
+
+},
+{
+    id:134,
+    rollNo: 4,
+    name: 'Ronaldo JR',
+    phone: '9801320000',
+    parent: 'Cristiano Ronaldo',
+    address: 'Portugal',
+    class: 8
+
+},
+]
 
 export const  students = [
   {

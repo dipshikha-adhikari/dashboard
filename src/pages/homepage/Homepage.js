@@ -31,7 +31,7 @@ dispatch({type:'FILTER_BY_STATUS', payload: e})
     </div>
      </div>
         <Widget/>
-      <div className='orders'>
+      <div className='transactions'>
 <h4 className="heading">Recent transactions</h4>
 <Input
           placeholder="Search by name"
